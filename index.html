@@ -229,45 +229,11 @@
 							<a href="views/dashboard.html" addtabs="10000" url="views/dashboard.html" py="kzt" pinyin="kongzhitai"><i class="fa fa-dashboard"></i>
 								<span>控制台</span>
 								<span class="pull-right-container">
-                        			<small class="label pull-right bg-blue">热</small>
+                        			<small class="label pull-right bg-blue"></small>
                         		</span>
 							</a>
 						</li>
-						<li class="treeview">
-							<a href="javascript:;" addtabs="11256" url="javascript:;" py="xtgl" pinyin="xitongguanli"><i class="fa fa-cogs"></i>
-								<span>系统管理</span>
-								<span class="pull-right-container">
-									<small class="label pull-right bg-purple">18</small>
-								</span>
-							</a>
-							<ul class="treeview-menu">
-								<li class="">
-									<a href="config.html" addtabs="10001" url="config.html" py="" pinyin=""><i class="fa fa-cog"></i>
-										<span>系统配置</span><span class="pull-right-container"></span>
-									</a>
-								</li>
-								<li class="">
-									<a href="attachment.html" addtabs="10002" url="attachment.html" py="" pinyin=""><i class="fa fa-file-image-o"></i>
-										<span>附件管理</span> <span class="pull-right-container"></span>
-									</a>
-								</li>
-								<li class="">
-									<a href="crontab.html" addtabs="10003" url="crontab.html" py="" pinyin=""><i class="fa fa-tasks"></i>
-										<span>定时任务</span><span class="pull-right-container"></span>
-									</a>
-								</li>
-								<li class="">
-									<a href="database.html" addtabs="10004" url="database.html" py="" pinyin=""><i class="fa fa-database"></i>
-										<span>数据库管理</span><span class="pull-right-container"> </span>
-									</a>
-								</li>
-								<li class="">
-									<a href="profile.html" addtabs="10005" url="profile.html" py="" pinyin=""><i class="fa fa-user"></i>
-										<span>个人配置</span>
-									</a>
-								</li>
-							</ul>
-						</li>
+						
 						<li class="treeview">
 							<a href="javascript:;" addtabs="11218" url="javascript:;" py="" pinyin=""><i class="fa fa-magic"></i>
 								<span>表单</span>
@@ -377,18 +343,82 @@
 								</li>
 							</ul>
 						</li>
-						<li class="">
-							<a href="version.html" addtabs="11192" url="version.html" py="bbgl" pinyin="banbenguanli"><i class="fa fa-file-text-o"></i>
-								<span>版本管理</span>
-								<span class="pull-right-container"></span>
+						<li class="treeview">
+							<a href="javascript:;" addtabs="10022" url="javascript:;" py="wxgl" pinyin="weixinguanli"><i class="fa fa-wechat"></i>
+								<span>业务相关</span>
+								<span class="pull-right-container">
+									<i class="fa fa-angle-left pull-right"></i>
+								</span>
 							</a>
+							<ul class="treeview-menu">
+								<li class="treeview">
+									<a href="javascript:;" addtabs="11256" url="javascript:;" py="xtgl" pinyin="xitongguanli"><i class="fa fa-cogs"></i>
+										<span>系统管理</span>
+										<span class="pull-right-container">
+											<i class="fa fa-angle-left pull-right"></i>
+										</span>
+									</a>
+									<ul class="treeview-menu">
+										<li class="">
+											<a href="views/config.html" addtabs="10001" url="views/config.html" py="" pinyin=""><i class="fa fa-cog"></i>
+												<span>系统配置</span><span class="pull-right-container"></span>
+											</a>
+										</li>
+										<li class="">
+											<a href="views/attachment.html" addtabs="10002" url="views/attachment.html" py="" pinyin=""><i class="fa fa-file-image-o"></i>
+												<span>附件管理</span> <span class="pull-right-container"></span>
+											</a>
+										</li>
+										<li class="">
+											<a href="views/crontab.html" addtabs="10003" url="views/crontab.html" py="" pinyin=""><i class="fa fa-tasks"></i>
+												<span>定时任务</span><span class="pull-right-container"></span>
+											</a>
+										</li>
+										<li class="">
+											<a href="views/database.html" addtabs="10004" url="views/database.html" py="" pinyin=""><i class="fa fa-database"></i>
+												<span>数据库管理</span><span class="pull-right-container"> </span>
+											</a>
+										</li>
+										<li class="">
+											<a href="views/profile.html" addtabs="10005" url="views/profile.html" py="" pinyin=""><i class="fa fa-user"></i>
+												<span>个人配置</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+								<li class="">
+									<a href="views/invoice.html" addtabs="10023" url="views/invoice.html" py="wxzdhfgl" pinyin=""><i class="fa fa-reply-all"></i>
+										<span>发票</span><spanclass="pull-right-container"></span>
+									</a>
+								</li>
+								<li class="">
+									<a href="views/profile.html" addtabs="10024" url="views/profile.html" py="wxzdhfgl" pinyin=""><i class="fa fa-reply-all"></i>
+										<span>个人简介</span><spanclass="pull-right-container"></span>
+									</a>
+								</li>
+								<li class="">
+									<a href="views/login.html" target="_blank" url="views/login.html" py="wxzdhfgl" pinyin=""><i class="fa fa-reply-all"></i>
+										<span>登录</span><spanclass="pull-right-container"></span>
+									</a>
+								</li>
+								<li class="">
+									<a href="views/404.html" addtabs="10025" url="views/404.html" py="wxzdhfgl" pinyin=""><i class="fa fa-reply-all"></i>
+										<span>404<spanclass="pull-right-container"></span>
+									</a>
+								</li>
+								<li class="">
+									<a href="views/500.html" addtabs="10026" url="views/500.html" py="wxzdhfgl" pinyin=""><i class="fa fa-reply-all"></i>
+										<span>500</span><spanclass="pull-right-container"></span>
+									</a>
+								</li>
+								<li class="">
+									<a href="views/pace.html" addtabs="10027" url="views/pace.html" py="wxzdhfgl" pinyin=""><i class="fa fa-reply-all"></i>
+										<span>加载页</span><spanclass="pull-right-container"></span>
+									</a>
+								</li>
+							</ul>
 						</li>
-						<li class="">
-							<a href="test.html" addtabs="11324" url="test.html" py="csgl" pinyin="ceshiguanli"><i class="fa fa-circle-o"></i>
-								<span>测试管理</span>
-								<span class="pull-right-container"></span>
-							</a>
-						</li>
+						
 					</ul>
 				</section>
 				<!-- /.sidebar -->

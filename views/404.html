@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
+
+		<link rel="shortcut icon" href="../assets/img/favicon.ico" />
+		<!-- Loading Bootstrap -->
+		<link href="../assets/css/backend.min.css" rel="stylesheet">
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+		<!--[if lt IE 9]>
+          <script src="assets/js/html5shiv.js"></script>
+          <script src="assets/js/respond.min.js"></script>
+        <![endif]-->
+		<script type="text/javascript">
+			var require = {
+				"config": {
+					"site": {
+						"name": "FastAdmin",
+						"cdnurl": "./",
+						"version": "1.0.0",
+						"timezone": "Asia/Shanghai",
+						"languages": {
+							"backend": "zh-cn",
+							"frontend": "zh-cn"
+						}
+					},
+					"upload": {
+						"cdnurl": "./",
+						"uploadurl": "data/upload.json",
+						"bucket": "yourbucketname",
+						"maxsize": "10mb",
+						"mimetype": "*",
+						"multipart": {
+							"policy": "eyJidWNrZXQiOiJ5b3VyYnVja2V0bmFtZSIsInNhdmUta2V5IjoiXC91cGxvYWRzXC97eWVhcn17bW9ufXtkYXl9XC97ZmlsZW1kNX17LnN1ZmZpeH0iLCJleHBpcmF0aW9uIjoxNTAwNTI2NTczLCJub3RpZnktdXJsIjoiaHR0cDpcL1wvd3d3LnlvdXJzaXRlLmNvbVwvdXB5dW5cL25vdGlmeSJ9",
+							"signature": "043eaf09c0319b1a9a11d06511bfdc4e",
+							"bucket": "yourbucketname",
+							"save-key": "/uploads/{year}{mon}{day}/{filemd5}{.suffix}",
+							"expiration": 1500526573,
+							"notify-url": "http://www.yoursite.com/upyun/notify"
+						},
+						"multiple": false
+					},
+					"modulename": "admin",
+					"controllername": "dashboard",
+					"actionname": "index",
+					"jsname": "backend/dashboard",
+					"moduleurl": "./",
+					"language": "zh-cn",
+					"referer": null
+				}
+			};
+		</script>
+	</head>
+
+	<body class="inside-header inside-aside ">
+		<div id="main" role="main">
+			<section class="content-header">
+      <h1>
+        404 Error Page
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Examples</a></li>
+        <li class="active">404 error</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="error-page">
+        <h2 class="headline text-yellow"> 404</h2>
+
+        <div class="error-content">
+          <h3><i class="fa fa-warning text-yellow"></i> Oops! Page not found.</h3>
+
+          <p>
+            We could not find the page you were looking for.
+            Meanwhile, you may <a href="../../index.html">return to dashboard</a> or try using the search form.
+          </p>
+
+          <form class="search-form">
+            <div class="input-group">
+              <input type="text" name="search" class="form-control" placeholder="Search">
+
+              <div class="input-group-btn">
+                <button type="submit" name="submit" class="btn btn-warning btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+            <!-- /.input-group -->
+          </form>
+        </div>
+        <!-- /.error-content -->
+      </div>
+      <!-- /.error-page -->
+    </section>
+		</div>
+		<script src="../assets/js/require.min.js" data-main="../assets/js/require-backend.min.js"></script>
+	</body>
+
+</html>
