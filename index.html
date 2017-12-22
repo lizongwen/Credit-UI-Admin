@@ -225,15 +225,6 @@
 					<!--如果想始终显示子菜单,则给ul加上show-submenu类即可-->
 					<ul class="sidebar-menu">
 						<li class="header">站内导航</li>
-						<li class="active">
-							<a href="views/dashboard.html" addtabs="10000" url="views/dashboard.html" py="kzt" pinyin="kongzhitai"><i class="fa fa-dashboard"></i>
-								<span>控制台</span>
-								<span class="pull-right-container">
-                        			<small class="label pull-right bg-blue"></small>
-                        		</span>
-							</a>
-						</li>
-						
 						<li class="treeview">
 							<a href="javascript:;" addtabs="11218" url="javascript:;" py="" pinyin=""><i class="fa fa-magic"></i>
 								<span>表单</span>
@@ -242,7 +233,7 @@
 								</span>
 							</a>
 							<ul class="treeview-menu">
-								<li class="">
+								<li class="active">
 									<a href="views/general.html" addtabs="10006" url="views/general.html" py="" pinyin=""><i class="fa fa-table"></i>
 										<span>通用元素</span> <span class="pull-right-container"></span>
 									</a>
@@ -351,6 +342,14 @@
 								</span>
 							</a>
 							<ul class="treeview-menu">
+								<li class="">
+									<a href="views/dashboard.html" addtabs="10000" url="views/dashboard.html" py="kzt" pinyin="kongzhitai"><i class="fa fa-dashboard"></i>
+										<span>控制台</span>
+										<span class="pull-right-container">
+		                        			<small class="label pull-right bg-blue"></small>
+		                        		</span>
+									</a>
+								</li>
 								<li class="treeview">
 									<a href="javascript:;" addtabs="11256" url="javascript:;" py="xtgl" pinyin="xitongguanli"><i class="fa fa-cogs"></i>
 										<span>系统管理</span>
@@ -729,7 +728,8 @@
 		</div>
 		<!-- ./wrapper -->
 		<!-- end main content -->
-		<script src="assets/js/require.js" data-main="assets/js/require-backend.min.js"></script>
+		<script src="assets/js/require.js" data-main="assets/js/require-backend.js"></script>
+		<!--<script src="assets/js/require-backend.js"></script>-->
 	</body>
 
 </html>

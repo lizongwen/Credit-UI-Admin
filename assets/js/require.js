@@ -6,7 +6,6 @@
 //problems with requirejs.exec()/transpiler plugins that may not be strict.
 /*jslint regexp: true, nomen: true, sloppy: true */
 /*global window, navigator, document, importScripts, setTimeout, opera */
-
 var requirejs, require, define;
 (function (global, setTimeout) {
     var req, s, head, baseElement, dataMain, src,
@@ -173,8 +172,8 @@ var requirejs, require, define;
         }
         return e;
     }
-
     if (typeof define !== 'undefined') {
+    	
         //If a define is already in play via another AMD loader,
         //do not overwrite.
         return;
@@ -188,12 +187,12 @@ var requirejs, require, define;
         cfg = requirejs;
         requirejs = undefined;
     }
-
     //Allow for a require config object
     if (typeof require !== 'undefined' && !isFunction(require)) {
         //assume it is a config object.
         cfg = require;
         require = undefined;
+        
     }
 
     function newContext(contextName) {
@@ -1758,6 +1757,7 @@ var requirejs, require, define;
      * on a require that are not standardized), and to give a short
      * name for minification/local scope use.
      */
+    
     req = requirejs = function (deps, callback, errback, optional) {
 
         //Find the right context, use default
@@ -1808,6 +1808,7 @@ var requirejs, require, define;
      * that have a better solution than setTimeout.
      * @param  {Function} fn function to execute later.
      */
+    
     req.nextTick = typeof setTimeout !== 'undefined' ? function (fn) {
         setTimeout(fn, 4);
     } : function (fn) { fn(); };
@@ -1815,6 +1816,7 @@ var requirejs, require, define;
     /**
      * Export require as a global, but only if it does not already exist.
      */
+    
     if (!require) {
         require = req;
     }
@@ -1828,7 +1830,7 @@ var requirejs, require, define;
         contexts: contexts,
         newContext: newContext
     };
-
+	
     //Create default context.
     req({});
 
@@ -1858,7 +1860,7 @@ var requirejs, require, define;
             head = s.head = baseElement.parentNode;
         }
     }
-
+	
     /**
      * Any errors that require explicitly generates will be passed to this
      * function. Intercept/override it if you want custom error handling.
@@ -2001,7 +2003,7 @@ var requirejs, require, define;
     }
 
     //Look for a data-main script attribute, which could also adjust the baseUrl.
-    if (isBrowser && !cfg.skipDataMain) {
+    if (isBrowser && !cfg.skipDataMain) {    	
         //Figure out baseUrl. Get it from the script tag with require.js in it.
         eachReverse(scripts(), function (script) {
             //Set the 'head' where we can append children by
@@ -2009,7 +2011,6 @@ var requirejs, require, define;
             if (!head) {
                 head = script.parentNode;
             }
-
             //Look for a data-main attribute to set main script for the page
             //to load. If it is there, the path to data main becomes the
             //baseUrl, if it is not already set.
@@ -2017,7 +2018,6 @@ var requirejs, require, define;
             if (dataMain) {
                 //Preserve dataMain in case it is a path (i.e. contains '?')
                 mainScript = dataMain;
-
                 //Set final baseUrl if there is not already an explicit one,
                 //but only do so if the data-main value is not a loader plugin
                 //module ID.
@@ -2042,12 +2042,10 @@ var requirejs, require, define;
 
                 //Put the data-main script in the files to load.
                 cfg.deps = cfg.deps ? cfg.deps.concat(mainScript) : [mainScript];
-
                 return true;
             }
         });
     }
-
     /**
      * The function that handles definitions of modules. Differs from
      * require() in that a string for the module should be the first argument,
@@ -2055,6 +2053,7 @@ var requirejs, require, define;
      * return a value to define the module corresponding to the first argument's
      * name.
      */
+    
     define = function (name, deps, callback) {
         var node, context;
 
