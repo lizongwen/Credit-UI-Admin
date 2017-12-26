@@ -138,7 +138,6 @@ require(['jquery', 'bootstrap'], function($, undefined) {
 	require.config({
 		paths: paths
 	});
-
 	// 初始化
 	$(function() {
 		require(['fast'], function(Fast) {

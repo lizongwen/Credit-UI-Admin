@@ -81,7 +81,7 @@ define(['fast', 'moment'], function (Fast, Moment) {
             //修复含有fixed-footer类的body边距
             if ($(".fixed-footer").size() > 0) {
                 $(document.body).css("padding-bottom", $(".fixed-footer").height());
-            }
+			}
         }
     };
     Backend.api = $.extend(Fast.api, Backend.api);

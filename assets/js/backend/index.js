@@ -178,12 +178,11 @@ define(['jquery', 'bootstrap', 'backend', 'addtabs', 'adminlte', 'form'], functi
 
             //绑定tabs事件
             $('#nav').addtabs({iframeHeight: "100%"});
-
+			
             //修复iOS下iframe无法滚动的BUG
             if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
                 $(".tab-addtabs").addClass("ios-iframe-fix");
             }
-
             if ($("ul.sidebar-menu li.active a").size() > 0) {
                 $("ul.sidebar-menu li.active a").trigger("click");
             } else {
@@ -194,9 +193,9 @@ define(['jquery', 'bootstrap', 'backend', 'addtabs', 'adminlte', 'form'], functi
             $(document).on("click", "a[addtabs]", function (e) {
                 localStorage.setItem("lastpage", $(this).attr("url"));
             });
-            
+           
             //回到最后一次打开的页面
-            var lastpage = localStorage.getItem("lastpage");
+			var lastpage = localStorage.getItem("lastpage");
             if (lastpage) {
                 //刷新页面后跳到到刷新前的页面
                 Backend.api.addtabs(lastpage);
