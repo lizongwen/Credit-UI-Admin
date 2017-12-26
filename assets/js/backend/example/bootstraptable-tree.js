@@ -1,10 +1,10 @@
-define(['jquery', 'bootstrap', 'backend', 'table', 'form',''], function ($, undefined, Backend, Table, Form) {
+define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefined, Backend, Table, Form) {
     var Controller = {
         index: function () {
             // 初始化表格参数配置
             Table.api.init({
                 extend: {
-                    index_url: 'data/bootstraptable.json',
+                    index_url: 'data/bootstraptable-tree.json',
                     add_url: '',
                     edit_url: '',
                     del_url: 'data/del.json',
@@ -16,33 +16,20 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form',''], function ($, unde
             // 初始化表格
             table.bootstrapTable({
                 url:'/'+ $.fn.bootstrapTable.defaults.extend.index_url,
+                treeView: true,
+                treeId: "Id",
+                treeField: "Name",
+                treeRootLevel: 1,
                 columns: [
                     [
                         //该列为复选框字段,如果后台的返回state值将会默认选中
                         {field: 'state', checkbox: true, },
-                        {field: 'id', title: 'ID', operate: false},
+                        {field: 'id', title: 'ID'},
                         //默认隐藏该列
-                        {field: 'admin_id', title: __('Admin_id'), visible: false, operate: false},
+                        {field: 'Name', title: '名称'},
                         //直接响应搜索
-                        {field: 'username', title: __('Username'), formatter: Table.api.formatter.search},
+                        {field: 'Url', title: '路径'},
                         //模糊搜索
-                        {field: 'title', title: __('Title'), operate: 'LIKE %...%', placeholder: '模糊搜索，*表示任意字符', style: 'width:200px'},
-                        //通过Ajax渲染searchList，也可以使用JSON数据
-                        {field: 'url', title: __('Url'), align: 'left', searchList: $.getJSON('/data/searchlist.json?search=a&field=row[user_id]'), formatter: Controller.api.formatter.url},
-                        //点击IP时同时执行搜索此IP,同时普通搜索使用下拉列表的形式
-                        {field: 'ip', title: __('IP'), searchList: ['127.0.0.1', '127.0.0.2'], events: Controller.api.events.ip, formatter: Controller.api.formatter.ip},
-                        //自定义栏位
-                        {field: 'custom', title: __('Custom'), operate: false, formatter: Controller.api.formatter.custom},
-                        //browser是一个不存在的字段
-                        //通过formatter来渲染数据,同时为它添加上事件
-                        {field: 'browser', title: __('Browser'), operate: false, events: Controller.api.events.browser, formatter: Controller.api.formatter.browser},
-                        //启用时间段搜索
-                        {field: 'createtime', title: __('Create time'), formatter: Table.api.formatter.datetime, operate: 'BETWEEN', type: 'datetime', addclass: 'datetimepicker', data: 'data-date-format="YYYY-MM-DD HH:mm:ss"'},
-                        //我们向操作栏额外添加上一个详情按钮,并保留已有的编辑和删除控制,同时为这个按钮添加上点击事件
-                        {field: 'operate', title: __('Operate'), events: Controller.api.events.operate, formatter: function (value, row, index) {
-                                var detail = '<a class="btn btn-xs btn-success btn-detail">详情</a> ';
-                                return detail + Table.api.formatter.operate.call(this, value, row, index, table);
-                            }}
                     ],
                 ],
                 //禁用默认搜索

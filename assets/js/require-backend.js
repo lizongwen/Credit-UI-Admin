@@ -30,6 +30,7 @@ require.config({
 		'bootstrap-table': '../libs/bootstrap-table/dist/bootstrap-table.min',
 		'bootstrap-table-export': '../libs/bootstrap-table/dist/extensions/export/bootstrap-table-export.min',
 		'bootstrap-table-mobile': '../libs/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile',
+		'bootstrap-table-tree': '../libs/bootstrap-table/dist/bootstrap-table-treegrid',
 		'bootstrap-table-lang': '../libs/bootstrap-table/dist/locale/bootstrap-table-zh-CN',
 		'tableexport': '../libs/tableExport.jquery.plugin/tableExport.min',
 		'dragsort': '../libs/dragsort/jquery.dragsort',
@@ -81,6 +82,10 @@ require.config({
 		},
 		'bootstrap-table-template': {
 			deps: ['bootstrap-table', 'template'],
+			exports: '$.fn.bootstrapTable.defaults'
+		},
+		'bootstrap-table-tree':{
+			deps: ['bootstrap-table'],
 			exports: '$.fn.bootstrapTable.defaults'
 		},
 		'tableexport': {
