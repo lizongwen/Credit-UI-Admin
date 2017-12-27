@@ -1,3 +1,4 @@
+alert(requirejs.s.contexts._.config.config.site.cdnurl)
 require.config({
 	urlArgs: "v=" + requirejs.s.contexts._.config.config.site.version,
 	packages: [{
@@ -27,7 +28,7 @@ require.config({
 		'bootstrap-datetimepicker': '../libs/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min',
 		'bootstrap-select': '../libs/bootstrap-select/dist/js/bootstrap-select.min',
 		'bootstrap-select-lang': '../libs/bootstrap-select/dist/js/i18n/defaults-zh_CN',
-		'bootstrap-table': '../libs/bootstrap-table/dist/bootstrap-table.min',
+		'bootstrap-table': '../libs/bootstrap-table/dist/bootstrap-table',
 		'bootstrap-table-export': '../libs/bootstrap-table/dist/extensions/export/bootstrap-table-export.min',
 		'bootstrap-table-mobile': '../libs/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile',
 		'bootstrap-table-tree': '../libs/bootstrap-table/dist/bootstrap-table-treegrid',

@@ -14,8 +14,9 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form',''], function ($, unde
 
             var table = $("#table");
             // 初始化表格
+            console.log($.fn.bootstrapTable.defaults.extend)
             table.bootstrapTable({
-                url:'/'+ $.fn.bootstrapTable.defaults.extend.index_url,
+                url: $.fn.bootstrapTable.defaults.extend.index_url,
                 columns: [
                     [
                         //该列为复选框字段,如果后台的返回state值将会默认选中
@@ -28,7 +29,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form',''], function ($, unde
                         //模糊搜索
                         {field: 'title', title: __('Title'), operate: 'LIKE %...%', placeholder: '模糊搜索，*表示任意字符', style: 'width:200px'},
                         //通过Ajax渲染searchList，也可以使用JSON数据
-                        {field: 'url', title: __('Url'), align: 'left', searchList: $.getJSON('/data/searchlist.json?search=a&field=row[user_id]'), formatter: Controller.api.formatter.url},
+                        {field: 'url', title: __('Url'), align: 'left', searchList: $.getJSON('data/searchlist.json?search=a&field=row[user_id]'), formatter: Controller.api.formatter.url},
                         //点击IP时同时执行搜索此IP,同时普通搜索使用下拉列表的形式
                         {field: 'ip', title: __('IP'), searchList: ['127.0.0.1', '127.0.0.2'], events: Controller.api.events.ip, formatter: Controller.api.formatter.ip},
                         //自定义栏位

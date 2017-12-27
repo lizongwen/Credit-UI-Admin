@@ -4,7 +4,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function($, undefine
 			// 初始化表格参数配置
 			Table.api.init({
 				extend: {
-					index_url: 'data/bootstraptable-tree.json',
+					index_url: '../data/bootstraptable-tree.json',
 					add_url: '',
 					edit_url: '',
 					del_url: 'data/del.json',
@@ -15,7 +15,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function($, undefine
 			var table = $("#table");
 			// 初始化表格
 			table.bootstrapTable({
-				url: '/' + $.fn.bootstrapTable.defaults.extend.index_url,
+				url: $.fn.bootstrapTable.defaults.extend.index_url,
 				treeView: true,
 				treeId: "Id",
 				treeField: "Name",
