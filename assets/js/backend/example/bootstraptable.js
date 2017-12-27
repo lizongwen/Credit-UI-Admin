@@ -16,7 +16,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form',''], function ($, unde
             // 初始化表格
             console.log($.fn.bootstrapTable.defaults.extend)
             table.bootstrapTable({
-                url: $.fn.bootstrapTable.defaults.extend.index_url,
+                url: "/"+$.fn.bootstrapTable.defaults.extend.index_url,
                 columns: [
                     [
                         //该列为复选框字段,如果后台的返回state值将会默认选中

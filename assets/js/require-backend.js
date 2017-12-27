@@ -1,4 +1,3 @@
-alert(requirejs.s.contexts._.config.config.site.cdnurl)
 require.config({
 	urlArgs: "v=" + requirejs.s.contexts._.config.config.site.version,
 	packages: [{
