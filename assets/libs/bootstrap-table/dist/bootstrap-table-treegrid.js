@@ -144,7 +144,6 @@
 		var that = this,
 			html = [],
 			data = this.getData();
-
 		this.trigger('pre-body', data);
 
 		this.$body = this.$el.find('tbody');
@@ -292,17 +291,15 @@
 
 					item[that.header.stateField] = value === true || (value && value.checked);
 				} else {
-
 					value = typeof value === 'undefined' || value === null ?
 						that.options.undefinedText : value;
 					var indent, icon;
 					if(that.options.treeView && column.field == that.options.treeField) {
 						var indent = item.Level == that.options.Level ? '' : sprintf('<span style="margin-left: %spx;"></span>', (item.Level - that.options.treeRootLevel) * 15);
 						var child = $.grep(data, function(d, i) {
-							return d.ParentId == item[that.options.treeId] && !d.hidden;
+							return d.ParentId == item[that.options.treeId]
 						});
-						icon = sprintf('<span class="tree-icon %s" style="cursor: pointer; margin: 0px 5px;"></span>', child.length > 0 ? that.options.expandIcon : that.options.collapseIcon);
-						//icon = sprintf('<span class="tree-icon %s" style="cursor: pointer; margin: 0px 5px;"></span>', child.length > 0 ? that.options.expandIcon : "");
+						icon = sprintf('<span class="tree-icon %s" style="cursor: pointer; margin: 0px 5px;"></span>', child.length?(child[0].hidden?that.options.collapseIcon:that.options.expandIcon):that.options.leafIcon);
 					}
 					text = that.options.cardView ? ['<div class="card-view">',
 						that.options.showHeader ? sprintf('<span class="title" %s>%s</span>', style,
@@ -315,19 +312,15 @@
 						value,
 						'</td>'
 					].join('');
-
 					if(that.options.cardView && that.options.smartDisplay && value === '') {
 						text = '';
 					}
 				}
-
 				html.push(text);
 			});
-
 			if(this.options.cardView) {
 				html.push('</td>');
 			}
-
 			html.push('</tr>');
 		}
 
@@ -369,7 +362,6 @@
 		});
 
 		this.$body.find('> tr[data-index] > td > .detail-icon').off('click').on('click', function() {
-			debugger;
 			var $this = $(this),
 				$tr = $this.parent().parent(),
 				index = $tr.data('index'),
@@ -390,7 +382,6 @@
 		});
 
 		this.$body.find('> tr[data-index] > td > .tree-icon').off('click').on('click', function(e) {
-			debugger;
 			e.stopPropagation();
 			var $this = $(this),
 				$tr = $this.parent().parent(),
@@ -490,8 +481,9 @@
 		treeField: "id", //treeView视图字段
 		treeId: "id",
 		treeRootLevel: 0, //根节点序号
-		treeCollapseAll: false, //是否全部展开
-		collapseIcon: "glyphicon glyphicon-chevron-right", //折叠样式
-		expandIcon: "glyphicon glyphicon-chevron-down" //展开样式
+		treeCollapseAll: false, //是否全部折叠
+		collapseIcon: "fa fa-caret-right", //折叠样式
+		expandIcon: "fa fa-caret-down", //展开样式
+		leafIcon: "fa fa-leaf" //叶子样式
 	});
 })(jQuery);
