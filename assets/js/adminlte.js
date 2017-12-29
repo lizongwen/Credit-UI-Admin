@@ -146,9 +146,7 @@ $(function () {
 
 	//Extend options if external options exist
 	if (typeof AdminLTEOptions !== "undefined") {
-		$.extend(true,
-			$.AdminLTE.options,
-			AdminLTEOptions);
+		$.extend(true, $.AdminLTE.options, AdminLTEOptions);
 	}
 
 	//Easy access to options
