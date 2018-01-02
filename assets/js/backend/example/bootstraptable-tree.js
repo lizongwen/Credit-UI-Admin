@@ -15,7 +15,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function($, undefine
 			var table = $("#table");
 			// 初始化表格
 			table.bootstrapTable({
-				url: "/"+$.fn.bootstrapTable.defaults.extend.index_url,
+				url: "../"+$.fn.bootstrapTable.defaults.extend.index_url,
 				treeView: true,
 				treeId: "Id",
 				treeField: "Name",
