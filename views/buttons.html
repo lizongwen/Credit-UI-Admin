@@ -61,58 +61,41 @@
 		<div id="main" role="main">
 			<section class="content-header">
 				<h1>
-        Buttons
-        <small>Control panel</small>
+        按钮
+        <small>控制面板</small>
       </h1>
 				<ol class="breadcrumb">
 					<li>
-						<a href="#"><i class="fa fa-dashboard"></i> Home</a>
+						<a href="#"><i class="fa fa-dashboard"></i> 主页</a>
 					</li>
 					<li>
-						<a href="#">UI</a>
+						<a href="#">UI元素</a>
 					</li>
-					<li class="active">Buttons</li>
+					<li class="active">按钮</li>
 				</ol>
 			</section>
 
 			<!-- Main content -->
 			<section class="content">
-
-				<div class="row">
+                <div class="row">
 					<div class="col-md-24">
 						<div class="box box-primary">
 							<div class="box-header">
 								<i class="fa fa-edit"></i>
 
-								<h3 class="box-title">Buttons</h3>
+								<h3 class="box-title">按钮</h3>
 							</div>
 							<div class="box-body pad table-responsive">
-								<p>Various types of buttons. Using the base class <code>.btn</code></p>
+								<p>各种类型的按钮。使用基类<code>.btn</code></p>
 								<table class="table table-bordered text-center">
 									<tr>
-										<th>通用按钮</th>
+										<th>通用按钮<code>.btn-primary</code></th>
 										<th>块级按钮<code>.btn-block</code></th>
 										<th>大按钮 <code>.btn-lg</code></th>
 										<th>小按钮 <code>.btn-sm</code></th>
 										<th>不可点按钮 <code>.disabled</code></th>
 									</tr>
-									<tr>
-										<td>
-											<button type="button" class="btn btn-default">系统默认</button>
-										</td>
-										<td>
-											<button type="button" class="btn btn-block btn-default">系统默认</button>
-										</td>
-										<td>
-											<button type="button" class="btn  btn-default btn-lg">系统默认</button>
-										</td>
-										<td>
-											<button type="button" class="btn  btn-default btn-sm">系统默认</button>
-										</td>
-										<td>
-											<button type="button" class="btn  btn-default disabled">系统默认</button>
-										</td>
-									</tr>
+									
 									<tr>
 										<td>
 											<button type="button" class="btn btn-primary">主要按钮</button>
@@ -128,6 +111,23 @@
 										</td>
 										<td>
 											<button type="button" class="btn  btn-primary disabled">主要按钮</button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<button type="button" class="btn btn-default">次要按钮</button>
+										</td>
+										<td>
+											<button type="button" class="btn btn-block btn-default">次要按钮</button>
+										</td>
+										<td>
+											<button type="button" class="btn  btn-default btn-lg">次要按钮</button>
+										</td>
+										<td>
+											<button type="button" class="btn  btn-default btn-sm">次要按钮</button>
+										</td>
+										<td>
+											<button type="button" class="btn  btn-default disabled">次要按钮</button>
 										</td>
 									</tr>
 									<tr>
@@ -207,9 +207,9 @@
 				</div>
 				<!-- ./row -->
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-md-24">
 						<!-- Block buttons -->
-						<div class="box">
+						<!--<div class="box">
 							<div class="box-header">
 								<h3 class="box-title">Block Buttons</h3>
 							</div>
@@ -218,33 +218,33 @@
 								<button type="button" class="btn btn-default btn-block btn-flat">.btn-block .btn-flat</button>
 								<button type="button" class="btn btn-default btn-block btn-sm">.btn-block .btn-sm</button>
 							</div>
-						</div>
+						</div>-->
 						<!-- /.box -->
 
 						<!-- Horizontal grouping -->
 						<div class="box">
 							<div class="box-header">
-								<h3 class="box-title">Horizontal Button Group</h3>
+								<h3 class="box-title">水平按钮组</h3>
 							</div>
 							<div class="box-body table-responsive pad">
 								<p>
-									Horizontal button groups are easy to create with bootstrap. Just add your buttons inside <code>&lt;div class="btn-group"&gt;&lt;/div&gt;</code>
+									水平按钮组很容易用引导程序创建。把你的按钮添加进去 <code>&lt;div class="btn-group"&gt;&lt;/div&gt;</code>
 								</p>
 
 								<table class="table table-bordered">
 									<tr>
-										<th>Button</th>
-										<th>Icons</th>
-										<th>Flat</th>
-										<th>Dropdown</th>
+										<th>按钮</th>
+										<th>图标</th>
+										<th>平角</th>
+										<th>下拉</th>
 									</tr>
 									<!-- Default -->
 									<tr>
 										<td>
 											<div class="btn-group">
-												<button type="button" class="btn btn-default">Left</button>
-												<button type="button" class="btn btn-default">Middle</button>
-												<button type="button" class="btn btn-default">Right</button>
+												<button type="button" class="btn btn-default">左按钮</button>
+												<button type="button" class="btn btn-default">中按钮</button>
+												<button type="button" class="btn btn-default">右按钮</button>
 											</div>
 										</td>
 										<td>
@@ -287,9 +287,9 @@
 									<tr>
 										<td>
 											<div class="btn-group">
-												<button type="button" class="btn btn-info">Left</button>
-												<button type="button" class="btn btn-info">Middle</button>
-												<button type="button" class="btn btn-info">Right</button>
+												<button type="button" class="btn btn-info">左按钮</button>
+												<button type="button" class="btn btn-info">中按钮</button>
+												<button type="button" class="btn btn-info">右按钮</button>
 											</div>
 										</td>
 										<td>
@@ -332,9 +332,9 @@
 									<tr>
 										<td>
 											<div class="btn-group">
-												<button type="button" class="btn btn-danger">Left</button>
-												<button type="button" class="btn btn-danger">Middle</button>
-												<button type="button" class="btn btn-danger">Right</button>
+												<button type="button" class="btn btn-danger">左按钮</button>
+												<button type="button" class="btn btn-danger">中按钮</button>
+												<button type="button" class="btn btn-danger">右按钮</button>
 											</div>
 										</td>
 										<td>
@@ -377,9 +377,9 @@
 									<tr>
 										<td>
 											<div class="btn-group">
-												<button type="button" class="btn btn-warning">Left</button>
-												<button type="button" class="btn btn-warning">Middle</button>
-												<button type="button" class="btn btn-warning">Right</button>
+												<button type="button" class="btn btn-warning">左按钮</button>
+												<button type="button" class="btn btn-warning">中按钮</button>
+												<button type="button" class="btn btn-warning">右按钮</button>
 											</div>
 										</td>
 										<td>
@@ -422,9 +422,9 @@
 									<tr>
 										<td>
 											<div class="btn-group">
-												<button type="button" class="btn btn-success">Left</button>
-												<button type="button" class="btn btn-success">Middle</button>
-												<button type="button" class="btn btn-success">Right</button>
+												<button type="button" class="btn btn-success">左按钮</button>
+												<button type="button" class="btn btn-success">中按钮</button>
+												<button type="button" class="btn btn-success">右按钮</button>
 											</div>
 										</td>
 										<td>
@@ -470,10 +470,10 @@
 
 						<div class="box">
 							<div class="box-header">
-								<h3 class="box-title">Button Addon</h3>
+								<h3 class="box-title">按钮插件</h3>
 							</div>
 							<div class="box-body">
-								<p>With dropdown</p>
+								<p>下拉</p>
 
 								<div class="input-group margin">
 									<div class="input-group-btn">
@@ -499,7 +499,7 @@
 									<input type="text" class="form-control">
 								</div>
 								<!-- /input-group -->
-								<p>Normal</p>
+								<p>正常</p>
 
 								<div class="input-group margin">
 									<div class="input-group-btn">
@@ -509,7 +509,7 @@
 									<input type="text" class="form-control">
 								</div>
 								<!-- /input-group -->
-								<p>Flat</p>
+								<p>平角</p>
 
 								<div class="input-group margin">
 									<input type="text" class="form-control">
@@ -525,7 +525,7 @@
 						<!-- split buttons box -->
 						<div class="box">
 							<div class="box-header">
-								<h3 class="box-title">Split buttons</h3>
+								<h3 class="box-title">分开的按钮</h3>
 							</div>
 							<div class="box-body">
 								<!-- Split button -->
@@ -828,7 +828,7 @@
 
 					</div>
 					<!-- /.col -->
-					<div class="col-md-6">
+					<div class="col-md-12">
 						<!-- Application buttons -->
 						<div class="box">
 							<div class="box-header">
