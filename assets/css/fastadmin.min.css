@@ -2239,8 +2239,8 @@ select.form-control {
   cursor: inherit;
   display: block;
 }
-/*.btn-default {*/
-  /*background-color: #f4f4f4;
+.btn-default {
+  /*background-color: #f4f4f4;*/
   background-color: #FFF;
   color: #444;
   border-color: #ddd;
@@ -2249,7 +2249,7 @@ select.form-control {
 .btn-default:active,
 .btn-default.hover {
   background-color: #FFF;
-}*/
+}
 .btn-outline {
   border: 1px solid #fff;
   background: transparent;
