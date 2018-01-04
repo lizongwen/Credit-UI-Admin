@@ -1558,22 +1558,23 @@ select.form-control {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 .box.box-primary {
-  border-top-color: #3c8dbc;
+  border-top-color: #1890ff;
 }
 .box.box-info {
-  border-top-color: #3498db;
+  border-top-color: #13c2c2;
 }
 .box.box-danger {
-  border-top-color: #e74c3c;
+  border-top-color: #fa541c;
 }
 .box.box-warning {
   border-top-color: #f39c12;
 }
 .box.box-success {
-  border-top-color: #18bc9c;
+  border-top-color: #52c41a;
 }
 .box.box-default {
   border-top-color: #d2d6de;
+  border-top-color:	#fafafa
 }
 .box.collapsed-box .box-body,
 .box.collapsed-box .box-footer {
