@@ -4367,7 +4367,7 @@ select[multiple].input-lg {
         font-size: 11px;
     }
 }
-
+/*button*/
 .btn {
     display: inline-block;
     margin-bottom: 0;
@@ -4438,15 +4438,21 @@ fieldset[disabled] a.btn {
 
 .btn-default:focus,
 .btn-default.focus {
-    color: #333;
+    /*color: #333;
     background-color: #e6e6e6;
-    border-color: #8c8c8c;
+    border-color: #8c8c8c;*/
+   color: #40a9ff;
+  background-color: #fff;
+  border-color: #40a9ff;
 }
 
 .btn-default:hover {
-    color: #333;
+    /*color: #333;
     background-color: #e6e6e6;
-    border-color: #adadad;
+    border-color: #adadad;*/
+    color: #40a9ff;
+    background-color: #fff;
+    border-color: #40a9ff;
 }
 
 .btn-default:active,
@@ -4466,9 +4472,13 @@ fieldset[disabled] a.btn {
 .btn-default:active.focus,
 .btn-default.active.focus,
 .open>.dropdown-toggle.btn-default.focus {
-    color: #333;
-    background-color: #d4d4d4;
-    border-color: #8c8c8c;
+    /*color: #333;
+    background-color: #fff;
+    border-color: #8c8c8c;*/
+  color: #40a9ff;
+  background-color: #fff;
+  border-color: #40a9ff;
+    
 }
 
 .btn-default:active,
@@ -4486,32 +4496,38 @@ fieldset[disabled] .btn-default:focus,
 .btn-default.disabled.focus,
 .btn-default[disabled].focus,
 fieldset[disabled] .btn-default.focus {
-    background-color: #fff;
-    border-color: #ccc;
+    /*background-color: #fff;
+    border-color: #ccc;*/
+   color: #40a9ff;
+  background-color: #fff;
+  border-color: #40a9ff;
 }
 
 .btn-default .badge {
-    color: #fff;
-    background-color: #333;
+    /*color: #fff;
+    background-color: #333;*/
+   color: #40a9ff;
+  background-color: #fff;
+  border-color: #40a9ff;
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #0092BF;
-    border-color: #0092BF;
+  background-color: #1890ff;
+  border-color: #1890ff;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
     color: #fff;
-    background-color: #0F6793;
-    border-color: #0092BF;
+  background-color: #40a9ff;
+  border-color: #40a9ff;
 }
 
 .btn-primary:hover {
     color: #fff;
-    background-color: #28BBDD;
-    border-color: #28BBDD;
+  background-color: #40a9ff;
+  border-color: #40a9ff;
 }
 
 .btn-primary:active,
