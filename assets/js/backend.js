@@ -79,10 +79,13 @@ define(['fast', 'moment'], function (Fast, Moment) {
                 Backend.api.addtabs($(this).attr("href"), $(this).attr("title"));
 			});
 			// 点击.radio的元素事件
-			$(document).on('click','.radio label',function(e){
+			$(document).on('click','.radio-label',function(e){
 				e.preventDefault();
-				$(this).parents('.form-group').find('.input-radio').removeClass('input-radio-checked');
-				$(this).children('.input-radio').addClass('input-radio-checked');
+				if($(this).hasClass('radio-disabled')){
+					return;
+				}
+				$(this).parents('.form-group').find('.radio-label').removeClass('radio-checked');
+				$(this).addClass('radio-checked');
 			})
             //修复含有fixed-footer类的body边距
             if ($(".fixed-footer").size() > 0) {

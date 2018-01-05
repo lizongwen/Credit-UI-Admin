@@ -3966,30 +3966,31 @@ input[type="search"] {
 
 .radio label,
 .checkbox label {
-    min-height: 17px;
     margin-bottom: 0;
     font-weight: normal;
     cursor: pointer;
 }
-
-.radio:hover .input-radio .input-radio-inner,
-.radio:hover .input-radio-inner,
-.radio-focused .input-radio-inner {
+.radio .radio-label{
+	vertical-align: top;
+}
+.radio .radio-label:hover .radio-input-wrapper .radio-inner,
+.radio .radio-label:hover .radio-inner,
+.radio-focused .radio-inner {
     border-color: #1890ff;
 }
 
-.radio .input-radio {
-	position: relative;
-	float: left;
-	line-height: 1;
+.radio-label .radio-input-wrapper {
+    position: relative;
+    float: left;
+    line-height: 1;
     vertical-align: text-bottom;
     white-space: nowrap;
     outline: none;
-	color: rgba(0, 0, 0, 0.65);
-	cursor: pointer;
+    color: rgba(0, 0, 0, 0.65);
+    cursor: pointer;
 }
 
-.radio .input-radio .input-radio-inner {
+.radio-label .radio-input-wrapper .radio-inner {
     position: relative;
     top: 0;
     left: 0;
@@ -4005,7 +4006,7 @@ input[type="search"] {
     transition: all 0.3s;
 }
 
-.radio .input-radio .input-radio-inner::after {
+.radio-label .radio-input-wrapper .radio-inner::after {
     position: absolute;
     width: 8px;
     height: 8px;
@@ -4025,7 +4026,11 @@ input[type="search"] {
     transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 
-.radio .input-radio-checked::after {
+.radio-label .radio-text {
+    padding: 0 8px;
+}
+
+.radio-label.radio-checked::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -4041,11 +4046,11 @@ input[type="search"] {
     visibility: hidden;
 }
 
-.radio .input-radio-checked .input-radio-inner {
+.radio-label.radio-checked .radio-inner {
     border-color: #1890ff;
 }
 
-.radio .input-radio-checked .input-radio-inner::after {
+.radio-label.radio-checked .radio-inner::after {
     -webkit-transform: scale(0.875);
     -ms-transform: scale(0.875);
     transform: scale(0.875);
@@ -4054,9 +4059,16 @@ input[type="search"] {
     transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
 }
 
-.radio .radio-text{
-	padding: 0 8px;
+.radio-label.radio-disabled .radio-inner {
+    border-color: #d9d9d9 !important;
+    background-color: #f5f5f5;
 }
+
+.radio-label.radio-disabled .radio-text {
+    color: rgba(0, 0, 0, 0.25);
+    cursor: not-allowed;
+}
+
 .radio input[type="radio"],
 .radio-inline input[type="radio"],
 .checkbox input[type="checkbox"],
@@ -4457,7 +4469,10 @@ select[multiple].input-lg {
         font-size: 11px;
     }
 }
+
+
 /*button*/
+
 .btn {
     display: inline-block;
     margin-bottom: 0;
@@ -4531,9 +4546,9 @@ fieldset[disabled] a.btn {
     /*color: #333;
     background-color: #e6e6e6;
     border-color: #8c8c8c;*/
-   color: #40a9ff;
-  background-color: #fff;
-  border-color: #40a9ff;
+    color: #40a9ff;
+    background-color: #fff;
+    border-color: #40a9ff;
 }
 
 .btn-default:hover {
@@ -4565,10 +4580,9 @@ fieldset[disabled] a.btn {
     /*color: #333;
     background-color: #fff;
     border-color: #8c8c8c;*/
-  color: #40a9ff;
-  background-color: #fff;
-  border-color: #40a9ff;
-    
+    color: #40a9ff;
+    background-color: #fff;
+    border-color: #40a9ff;
 }
 
 .btn-default:active,
@@ -4588,36 +4602,36 @@ fieldset[disabled] .btn-default:focus,
 fieldset[disabled] .btn-default.focus {
     /*background-color: #fff;
     border-color: #ccc;*/
-   color: #40a9ff;
-  background-color: #fff;
-  border-color: #40a9ff;
+    color: #40a9ff;
+    background-color: #fff;
+    border-color: #40a9ff;
 }
 
 .btn-default .badge {
     /*color: #fff;
     background-color: #333;*/
-   color: #40a9ff;
-  background-color: #fff;
-  border-color: #40a9ff;
+    color: #40a9ff;
+    background-color: #fff;
+    border-color: #40a9ff;
 }
 
 .btn-primary {
     color: #fff;
-  background-color: #1890ff;
-  border-color: #1890ff;
+    background-color: #1890ff;
+    border-color: #1890ff;
 }
 
 .btn-primary:focus,
 .btn-primary.focus {
     color: #fff;
-  background-color: #40a9ff;
-  border-color: #40a9ff;
+    background-color: #40a9ff;
+    border-color: #40a9ff;
 }
 
 .btn-primary:hover {
     color: #fff;
-  background-color: #40a9ff;
-  border-color: #40a9ff;
+    background-color: #40a9ff;
+    border-color: #40a9ff;
 }
 
 .btn-primary:active,
@@ -5509,7 +5523,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 }
 
 .input-group-addon {
-    padding: 6px 12px;
+    padding: 6px 10px;
     font-size: 12px;
     font-weight: normal;
     line-height: 1;
@@ -5534,7 +5548,17 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 
 .input-group-addon input[type="radio"],
 .input-group-addon input[type="checkbox"] {
-    margin-top: 0;
+    margin: 0;
+}
+
+.input-group-addon .radio,
+.input-group-addon .checkbox {
+    margin: 0;
+}
+
+.input-group-addon .radio-label .radio-input-wrapper .radio-inner {
+    /* width: 13px; */
+    /* height: 13px; */
 }
 
 .input-group .form-control:first-child,
