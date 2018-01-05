@@ -293,7 +293,6 @@
 								<div class="col-lg-6">
 									<div class="input-group">
 										<span class="input-group-addon">
-											
 											<div class="radio">
 												<label class="radio-label">
 													<span class="radio-input-wrapper">
@@ -309,7 +308,14 @@
 								<div class="col-lg-6">
 									<div class="input-group">
 										<span class="input-group-addon">
-											<input type="checkbox">
+											<div class="checkbox">
+												<label class="checkbox-label checkbox-checked">
+													<span class="checkbox-input-wrapper">
+														<input type="checkbox" name="optionsCheckbox" id="optionsCheckbox1" value="option1">
+														<span class="checkbox-inner"></span>
+													</span>
+												</label>
+											</div>
 										</span>
 										<input type="text" class="form-control">
 									</div>
@@ -340,20 +346,16 @@
 										</li>
 									</ul>
 								</div>
-								<!-- /btn-group -->
 								<input type="text" class="form-control">
 							</div>
-							<!-- /input-group -->
 							<p class="margin">正常</p>
 
 							<div class="input-group">
 								<div class="input-group-btn">
 									<button type="button" class="btn btn-danger">Action</button>
 								</div>
-								<!-- /btn-group -->
 								<input type="text" class="form-control">
 							</div>
-							<!-- /input-group -->
 							<p class="margin">小:
 								<code>.input-group.input-group-sm</code>
 							</p>
@@ -423,7 +425,7 @@
 								<div class="radio">
 									<label class="radio-label">
 										<span class="radio-input-wrapper">
-											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
 											<span class="radio-inner"></span>
 										</span>
 										<span class="radio-text">radio2</span>
@@ -432,7 +434,7 @@
 								<div class="radio">
 									<label class="radio-label">
 										<span class="radio-input-wrapper">
-											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+											<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
 											<span class="radio-inner"></span>
 										</span>
 										<span class="radio-text">radio3</span>
@@ -443,21 +445,21 @@
 								<div class="radio">
 									<label class="radio-label">
 										<span class="radio-input-wrapper">
-											<input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked>
+											<input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1">
 											<span class="radio-inner"></span>
 										</span>
 										<span class="radio-text">radio1</span>
 									</label>
 									<label class="radio-label">
 										<span class="radio-input-wrapper">
-											<input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked>
+											<input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1">
 											<span class="radio-inner"></span>
 										</span>
 										<span class="radio-text">radio2</span>
 									</label>
 									<label class="radio-label">
 										<span class="radio-input-wrapper">
-											<input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked>
+											<input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1">
 											<span class="radio-inner"></span>
 										</span>
 										<span class="radio-text">radio3</span>
@@ -478,6 +480,80 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-xs-24">
+					<div class="box box-primary">
+						<div class="box-header with-border">
+							<h3 class="box-title">多选框</h3>
+						</div>
+						<div class="box-body">
+							<div class="form-group">
+								<div class="checkbox">
+									<label class="checkbox-label">
+										<span class="checkbox-input-wrapper">
+											<input type="checkbox" name="optionsCheckbox" id="optionsCheckbox1" value="option1">
+											<span class="checkbox-inner"></span>
+										</span>
+										<span class="checkbox-text">checkbox1</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label class="checkbox-label">
+										<span class="checkbox-input-wrapper">
+											<input type="checkbox" name="optionsCheckbox" id="optionsCheckbox1" value="option1">
+											<span class="checkbox-inner"></span>
+										</span>
+										<span class="checkbox-text">checkbox2</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label class="checkbox-label checkbox-checked">
+										<span class="checkbox-input-wrapper">
+											<input type="checkbox" name="optionsCheckbox" id="optionsCheckbox1" value="option1">
+											<span class="checkbox-inner"></span>
+										</span>
+										<span class="checkbox-text">checkbox3</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+									<label class="checkbox-label">
+										<span class="checkbox-input-wrapper">
+											<input type="checkbox" name="optionsCheckbox" id="optionsCheckbox1" value="option1">
+											<span class="checkbox-inner"></span>
+										</span>
+										<span class="checkbox-text">checkbox1</span>
+									</label>
+									<label class="checkbox-label">
+										<span class="checkbox-input-wrapper">
+											<input type="checkbox" name="optionsCheckbox" id="optionsCheckbox1" value="option1">
+											<span class="checkbox-inner"></span>
+										</span>
+										<span class="checkbox-text">checkbox2</span>
+									</label>
+									<label class="checkbox-label checkbox-checked">
+										<span class="checkbox-input-wrapper">
+											<input type="checkbox" name="optionsCheckbox" id="optionsCheckbox1" value="option1">
+											<span class="checkbox-inner"></span>
+										</span>
+										<span class="checkbox-text">checkbox3</span>
+									</label>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="checkbox">
+									<label class="checkbox-label checkbox-disabled">
+										<span class="checkbox-input-wrapper">
+											<input type="checkbox" name="optionsCheckbox" id="optionsCheckbox1" value="option1">
+											<span class="checkbox-inner"></span>
+										</span>
+										<span class="checkbox-text">checkbox1</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-xs-24">
@@ -487,28 +563,6 @@
 						</div>
 						<div class="box-body">
 							<form role="form">
-								<div class="form-group">
-									<div class="checkbox">
-										<label>
-											<input type="checkbox"> Checkbox 1
-										</label>
-									</div>
-
-									<div class="checkbox">
-										<label>
-											<input type="checkbox"> Checkbox 2
-										</label>
-									</div>
-
-									<div class="checkbox">
-										<label>
-											<input type="checkbox" disabled> Checkbox disabled
-										</label>
-									</div>
-								</div>
-								<!-- radio -->
-
-
 								<!-- select -->
 								<div class="form-group">
 									<label>Select</label>

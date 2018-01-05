@@ -78,7 +78,7 @@ define(['fast', 'moment'], function (Fast, Moment) {
                 e.preventDefault();
                 Backend.api.addtabs($(this).attr("href"), $(this).attr("title"));
 			});
-			// 点击.radio的元素事件
+			// 点击.radio-label的元素事件
 			$(document).on('click','.radio-label',function(e){
 				e.preventDefault();
 				if($(this).hasClass('radio-disabled')){
@@ -86,6 +86,14 @@ define(['fast', 'moment'], function (Fast, Moment) {
 				}
 				$(this).parents('.form-group').find('.radio-label').removeClass('radio-checked');
 				$(this).addClass('radio-checked');
+			})
+			// 点击.checkbox-label的元素事件
+			$(document).on('click','.checkbox-label',function(e){
+				e.preventDefault();
+				if($(this).hasClass('checkbox-disabled')){
+					return;
+				}
+				$(this).toggleClass('checkbox-checked');
 			})
             //修复含有fixed-footer类的body边距
             if ($(".fixed-footer").size() > 0) {
