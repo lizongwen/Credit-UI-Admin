@@ -2373,6 +2373,7 @@ select.form-control {
   background: #f7f7f7;
 }
 /* NAV PILLS */
+
 .nav-pills > li > a {
   border-radius: 0;
   border-top: 3px solid transparent;
@@ -2450,18 +2451,21 @@ select.form-control {
 .nav-tabs-custom > .nav-tabs > li:not(.active) > a:active {
   border-color: transparent;
 }
-.nav-tabs-custom > .nav-tabs > li.active {
+/*.nav-tabs-custom > .nav-tabs > li.active {
   border-top-color: #3c8dbc;
+}*/
+.nav-tabs-custom > .nav-tabs > li.active {
+  border-bottom:2px solid #1890ff;
 }
 .nav-tabs-custom > .nav-tabs > li.active > a,
 .nav-tabs-custom > .nav-tabs > li.active:hover > a {
   background-color: #fff;
-  color: #444;
+  color: #1890ff;
 }
 .nav-tabs-custom > .nav-tabs > li.active > a {
   border-top-color: transparent;
-  border-left-color: #f4f4f4;
-  border-right-color: #f4f4f4;
+  border-left-color: #fff;
+  border-right-color: #fff;
 }
 .nav-tabs-custom > .nav-tabs > li:first-of-type {
   margin-left: 0;
