@@ -24,7 +24,6 @@ require.config({
 		// 以下的包从bower的libs目录加载
 		'jquery': '../libs/jquery/dist/jquery.min',
 		'bootstrap': '../libs/bootstrap/dist/js/bootstrap.min',
-		// 'bootstrap-datetimepicker': '../libs/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker',
 		'bootstrap-datetimepicker': '../libs/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min',
 		'bootstrap-select': '../libs/bootstrap-select/dist/js/bootstrap-select.min',
 		'bootstrap-select-lang': '../libs/bootstrap-select/dist/js/i18n/defaults-zh_CN',
