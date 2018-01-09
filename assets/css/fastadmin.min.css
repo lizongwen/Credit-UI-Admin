@@ -2621,7 +2621,6 @@ select.form-control {
  */
 
 .btn {
-    .border-radius(@btn-border-radius);
     -webkit-box-shadow: none;
     box-shadow: none;
 }
@@ -2865,17 +2864,10 @@ select.form-control {
 
 /* NAV PILLS */
 
-<<<<<<< HEAD
 .nav-pills>li>a {
     border-radius: 0;
     border-top: 3px solid transparent;
     color: #444;
-=======
-.nav-pills > li > a {
-  border-radius: 0;
-  border-top: 3px solid transparent;
-  color: #444;
->>>>>>> f4f8935068d47d835fd53a957520c973d810895b
 }
 
 .nav-pills>li>a>.fa,
@@ -2967,7 +2959,6 @@ select.form-control {
 .nav-tabs-custom>.nav-tabs>li:not(.active)>a:active {
     border-color: transparent;
 }
-<<<<<<< HEAD
 
 .nav-tabs-custom>.nav-tabs>li.active {
     border-top-color: #3c8dbc;
@@ -2982,11 +2973,8 @@ select.form-control {
 .nav-tabs-custom>.nav-tabs>li.active>a {
     border-top-color: transparent;
     border-left-color: #f4f4f4;
-    border-right-color: #f4f4f4;
-=======
-/*.nav-tabs-custom > .nav-tabs > li.active {
-  border-top-color: #3c8dbc;
-}*/
+	border-right-color: #f4f4f4;
+}
 .nav-tabs-custom > .nav-tabs > li.active {
   border-bottom:2px solid #1890ff;
 }
@@ -2999,7 +2987,6 @@ select.form-control {
   border-top-color: transparent;
   border-left-color: #fff;
   border-right-color: #fff;
->>>>>>> f4f8935068d47d835fd53a957520c973d810895b
 }
 
 .nav-tabs-custom>.nav-tabs>li:first-of-type {
