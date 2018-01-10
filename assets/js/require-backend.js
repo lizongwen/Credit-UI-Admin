@@ -33,6 +33,7 @@ require.config({
 		'bootstrap-table-tree': '../libs/bootstrap-table/dist/bootstrap-table-treegrid',
 		'bootstrap-table-lang': '../libs/bootstrap-table/dist/locale/bootstrap-table-zh-CN',
 		'select2':'../libs/select2/select2.min',
+		'select2-to-tree':'../libs/select2-to-tree/select2totree',
 		'icheck':'../libs/icheck/icheck.min',
 		'tableexport': '../libs/tableExport.jquery.plugin/tableExport.min',
 		'dragsort': '../libs/dragsort/jquery.dragsort',
@@ -107,6 +108,10 @@ require.config({
 			//            'css!../libs/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
 		],
 		'bootstrap-select-lang': ['bootstrap-select'],
+		'select2-to-tree':{
+			deps:['css!../libs/select2-to-tree/select2totree.css'],
+			exports: '$.fn.select2ToTree'
+		},
 		'summernote': ['../libs/summernote/dist/summernote.min'],
 		// 'summernote': ['../libs/summernote/dist/summernote.min', 'css!../libs/summernote/dist/summernote.css'],
 		//        'toastr': ['css!../libs/toastr/toastr.min.css'],
