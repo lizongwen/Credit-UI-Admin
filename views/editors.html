@@ -21,7 +21,7 @@
 			"config": {
 				"site": {
 					"name": "FastAdmin",
-					"cdnurl": "./",
+					"cdnurl": "../",
 					"version": "1.0.0",
 					"timezone": "Asia/Shanghai",
 					"languages": {
@@ -46,9 +46,9 @@
 					"multiple": false
 				},
 				"modulename": "admin",
-				"controllername": "dashboard",
+				"controllername": "editors",
 				"actionname": "index",
-				"jsname": "backend/dashboard",
+				"jsname": "backend/editors",
 				"moduleurl": "./",
 				"language": "zh-cn",
 				"referer": null
@@ -61,13 +61,13 @@
 	<div id="main" role="main">
 		<section class="content-header">
       <h1>
-        Text Editors
-        <small>Advanced form element</small>
+        富文本编辑器
+        <small>高级表单元素</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Forms</a></li>
-        <li class="active">Editors</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> 主页</a></li>
+        <li><a href="#">表单</a></li>
+        <li class="active">文本编辑器</li>
       </ol>
     </section>
 
@@ -77,7 +77,7 @@
         <div class="col-md-12">
           <div class="box box-info">
             <div class="box-header">
-              <h3 class="box-title">CK Editor
+              <h3 class="box-title">富文本编辑器-summernote
                 <small>Advanced and full of features</small>
               </h3>
               <!-- tools box -->
@@ -93,10 +93,8 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body pad">
-              <form>
-                    <textarea id="editor1" name="editor1" rows="10" cols="80">
-                                            This is my textarea to be replaced with CKEditor.
-                    </textarea>
+              <form role="form">
+					<textarea id="c-content" class="form-control summernote" rows="5" name="row[content]" cols="50"><p>我是测试内容</p></textarea>
               </form>
             </div>
           </div>
