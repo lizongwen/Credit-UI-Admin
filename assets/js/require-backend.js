@@ -107,7 +107,8 @@ require.config({
 			//            'css!../libs/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
 		],
 		'bootstrap-select-lang': ['bootstrap-select'],
-		'summernote': ['../libs/summernote/dist/summernote.min', 'css!../libs/summernote/dist/summernote.css'],
+		'summernote': ['../libs/summernote/dist/summernote.min'],
+		// 'summernote': ['../libs/summernote/dist/summernote.min', 'css!../libs/summernote/dist/summernote.css'],
 		//        'toastr': ['css!../libs/toastr/toastr.min.css'],
 		'jstree': ['css!../libs/jstree/dist/themes/default/style.css', ],
 		'plupload': {

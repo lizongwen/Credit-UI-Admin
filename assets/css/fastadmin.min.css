@@ -3978,6 +3978,13 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 /*
+ * Plugin: summernote
+ * ---------------------
+ */
+.note-editor.note-frame{
+	border-color:#d9d9d9
+}
+/*
  * Plugin: Full Calendar
  * ---------------------
  */

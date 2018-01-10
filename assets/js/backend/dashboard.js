@@ -1,4 +1,5 @@
 define(['jquery', 'bootstrap', 'backend', 'addtabs', 'table', 'echarts', 'echarts-theme','adminlte'], function ($, undefined, Backend, Datatable, Table, Echarts) {
+	
 
     var Controller = {
         index: function () {
