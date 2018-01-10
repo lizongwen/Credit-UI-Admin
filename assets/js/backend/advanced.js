@@ -1,5 +1,4 @@
 define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'select2-to-tree', 'bootstrap-datetimepicker', 'icheck', 'form'], function ($, undefined, undefined, select2, select2ToTree, undefined, undefined, Form) {
-	console.log(arguments)
 	var Controller = {
 		index: function () {
 			$('.selectpicker').each(function () {
