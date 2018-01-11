@@ -1,4 +1,4 @@
-define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'bootstrap-datetimepicker', 'icheck','form'], function ($, undefined,undefined,undefined,undefined,undefined,Form) {
+define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'select2-to-tree', 'bootstrap-datetimepicker', 'icheck', 'form'], function ($, undefined, undefined, select2, select2ToTree, undefined, undefined, Form) {
 	var Controller = {
 		index: function () {
 			$('.selectpicker').each(function () {
@@ -47,6 +47,31 @@ define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'bootstrap-datetim
 				checkboxClass: 'icheckbox_flat-green',
 				radioClass: 'iradio_flat-green'
 			});
+
+			var mydata = [
+				{
+					id: 1, text: "USA", inc: [
+						{
+							text: "west", inc: [
+								{
+									id: 111, text: "California", inc: [
+										{
+											id: 1111, text: "Los Angeles", inc: [
+												{ id: 11111, text: "Hollywood" }
+											]
+										},
+										{ id: 1112, text: "San Diego" }
+									]
+								},
+								{ id: 112, text: "Oregon" }
+							]
+						}
+					]
+				},
+				{ id: 2, text: "India" },
+				{ id: 3, text: "中国" }
+			];
+			$("#sel_1").select2ToTree({ treeData: { dataArr: mydata }, maximumSelectionLength: 3 });
 			Controller.api.bindevent();
 		},
 		api: {
