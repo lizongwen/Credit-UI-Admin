@@ -80,6 +80,7 @@ define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'select2-to-tree',
 				}
 			];
 			$("#sel_1").select2ToTree({ treeData: { dataArr: mydata }, maximumSelectionLength: 3 });
+			$("#sel_2").select2ToTree({ treeData: { dataArr: mydata }, maximumSelectionLength: 3 });
 			Controller.api.bindevent();
 		},
 		api: {

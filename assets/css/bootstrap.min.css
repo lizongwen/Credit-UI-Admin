@@ -4545,7 +4545,7 @@ select[multiple].input-lg {
         font-size: 11px;
     }
 }
-.control-label::before{
+.control-label.control-label-required::before{
 	display: inline-block;
     margin-right: 4px;
     content: "*";
@@ -4558,7 +4558,7 @@ select[multiple].input-lg {
     content: ":";
     margin: 0 8px 0 2px;
     position: relative;
-    top: -0.5px;
+    top: -1px;
 }
 
 /*button*/
