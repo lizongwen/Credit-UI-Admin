@@ -86,6 +86,7 @@ define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'select2-to-tree',
 		api: {
 			bindevent: function () {
 				Form.api.bindevent($("form[role=form]"));
+				Form.api.bindevent($("form[role=form1]"));
 			}
 		}
 	}
