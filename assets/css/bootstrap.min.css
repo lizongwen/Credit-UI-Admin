@@ -1389,10 +1389,10 @@ html {
 }
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue For Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
     line-height: 1.42857143;
-    color: #333333;
+    color: rgba(0, 0, 0, 0.65);
     background-color: #fff;
 }
 
@@ -3805,10 +3805,12 @@ legend {
 }
 
 label {
-    display: inline-block;
+	display: inline-block;
+	vertical-align: middle;
     max-width: 100%;
     margin-bottom: 5px;
-    font-weight: bold;
+	font-weight: bold;
+	color:rgba(0, 0, 0, 0.85);
 }
 
 input[type="search"] {
@@ -3955,6 +3957,7 @@ input[type="search"] {
 .form-group {
 	margin-bottom: 15px;
 }
+
 
 .radio,
 .checkbox {
@@ -4470,8 +4473,9 @@ select[multiple].input-lg {
     }
     .form-inline .input-group>.form-control {
         width: 100%;
-    }
-    .form-inline .control-label {
+	}
+	.form-inline label,
+	.form-inline .control-label {
         margin-bottom: 0;
         vertical-align: middle;
     }
@@ -4516,6 +4520,7 @@ select[multiple].input-lg {
 }
 
 @media (min-width: 768px) {
+	.form-horizontal label,
     .form-horizontal .control-label {
         text-align: right;
         margin-bottom: 0;
@@ -4540,7 +4545,21 @@ select[multiple].input-lg {
         font-size: 11px;
     }
 }
-
+.control-label::before{
+	display: inline-block;
+    margin-right: 4px;
+    content: "*";
+    font-family: SimSun;
+    line-height: 1;
+    font-size: 14px;
+    color: #f5222d;
+}
+.control-label::after{
+    content: ":";
+    margin: 0 8px 0 2px;
+    position: relative;
+    top: -0.5px;
+}
 
 /*button*/
 
@@ -5627,7 +5646,9 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
     margin: 0;
 }
 
-
+.input-group-btn>.dropdown-toggle .btn-dropdown-selection{
+	margin-right: 6px;
+}
 .input-group .form-control:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child>.btn,
@@ -5665,6 +5686,7 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 }
 
 .input-group-btn>.btn {
+	z-index: 3;
     position: relative;
 }
 
@@ -5680,13 +5702,13 @@ select[multiple].input-group-sm>.input-group-btn>.btn {
 
 .input-group-btn:first-child>.btn,
 .input-group-btn:first-child>.btn-group {
-    margin-right: -1px;
+    margin-right: -2px;
 }
 
 .input-group-btn:last-child>.btn,
 .input-group-btn:last-child>.btn-group {
     z-index: 2;
-    margin-left: -1px;
+    margin-left: -2px;
 }
 
 .input-affix {
