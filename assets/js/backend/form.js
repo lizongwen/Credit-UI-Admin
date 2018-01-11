@@ -7,7 +7,7 @@ define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'select2-to-tree',
 			$('.select2').each(function () {
 				$(this).select2()
 			});
-			$('#datepicker').datetimepicker({
+			$('#datepicker1,#datepicker2').datetimepicker({
 				showClose: true,
 				format: 'YYYY-MM-DD'
 			});
