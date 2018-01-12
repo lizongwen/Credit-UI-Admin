@@ -35,6 +35,7 @@ require.config({
 		'select2':'../libs/select2/select2.min',
 		'select2-to-tree':'../libs/select2-to-tree/select2totree',
 		'icheck':'../libs/icheck/icheck.min',
+		'smartcomplete':'../libs/smartcomplete/smartcomplete',
 		'tableexport': '../libs/tableExport.jquery.plugin/tableExport.min',
 		'dragsort': '../libs/dragsort/jquery.dragsort',
 		'qrcode': '../libs/jquery-qrcode/jquery.qrcode.min',
@@ -111,6 +112,9 @@ require.config({
 		'select2-to-tree':{
 			deps:['css!../libs/select2-to-tree/select2totree.css'],
 			exports: '$.fn.select2ToTree'
+		},
+		'smartcomplete':{
+			exports: '$.fn.smartComplete'
 		},
 		'summernote': ['../libs/summernote/dist/summernote.min'],
 		// 'summernote': ['../libs/summernote/dist/summernote.min', 'css!../libs/summernote/dist/summernote.css'],

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>demo</title>
+  <style>
+    div{
+      position: absolute;
+      margin: 110px;
+      background: yellow;
+    }
+    div>input{
+      outline: none;
+      margin: 50px;
+      padding: 5px 10px;
+    }
+    .abc>li:nth-child(odd){
+      background: #FFFFBF !important;
+    }
+    .abc>li:hover{
+      background: #BFFFBF !important;
+      color:#FF8000 !important;
+      font-weight: bold;
+    }
+  </style>
+  <script src="jq.js" type="text/javascript"></script>
+  <script src="smartcomplete.js" type="text/javascript"></script>
+</head>
+<body>
+  <input id="a" type="search" autocomplete="off"/>
+
+  <div>
+    <input type="search" autocomplete="off"/>
+    <input type="search" autocomplete="off"/>
+  </div>
+
+  <script>
+    $("#a").smartComplete({
+      url:"result.json",  //服务端地址，此处我们使用JSON来模拟数据
+      ulClass:"abc"
+    });
+
+    $("div>input").smartComplete({
+      url:"result.json",
+      matchPY:!1,   //忽略拼音打字过程
+      actFontColor:"red",
+      callback:function(data){  //回调，参数为选中数据项的对应数据
+        console.log(data.id,data.text)
+      }
+    });
+  </script>
+</body>
+</html>
