@@ -1,4 +1,4 @@
-define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'select2-to-tree', 'bootstrap-datetimepicker', 'icheck', 'form'], function ($, undefined, undefined, select2, select2ToTree, undefined, undefined, Form) {
+define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'select2-to-tree', 'bootstrap-datetimepicker', 'icheck', 'form','smartcomplete'], function ($, undefined, undefined, select2, select2ToTree, undefined, undefined, Form) {
 	var Controller = {
 		index: function () {
 			$('.selectpicker').each(function () {
@@ -31,6 +31,10 @@ define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'select2-to-tree',
 				showClose: true,
 				format: 'YYYY-MM',
 				viewMode: 'months'
+			});
+			$("#search").smartComplete({
+				url: "../../data/result.json",  //服务端地址，此处我们使用JSON来模拟数据
+				ulClass: "abc"
 			});
 			//iCheck for checkbox and radio inputs
 			$('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
@@ -85,8 +89,25 @@ define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'select2-to-tree',
 		},
 		api: {
 			bindevent: function () {
+				Fast.config.toastr.positionClass = "toast-top-center";
+				$("form[role=form2]").data("validator-options", {
+					'fields':{
+						'username':{
+							'rule':'required',
+							'msg':'请输入用户名'
+						}						
+					},
+					invalid: function (form, errors) {
+						console.log(form,errors)
+						$.each(errors, function (i, j) {
+							Toastr.error(j);
+						});
+					},
+					'target': '#errtips'
+				});
 				Form.api.bindevent($("form[role=form]"));
 				Form.api.bindevent($("form[role=form1]"));
+				Form.api.bindevent($("form[role=form2]"));
 			}
 		}
 	}

@@ -281,6 +281,8 @@ define(['jquery', 'bootstrap', 'toastr', 'layer', 'lang'], function ($, undefine
 			});
 		},
 		init: function () {
+			
+			
 			// 对相对地址进行处理
 			$.ajaxSetup({
 				beforeSend: function (xhr, setting) {

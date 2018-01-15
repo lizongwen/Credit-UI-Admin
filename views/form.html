@@ -179,6 +179,17 @@
 									</div>
 								</div>
 								<div class="form-group">
+									<div class="input-affix">
+										<span class="input-prefix">
+											<i class="fa fa-user"></i>
+										</span>
+										<input id="search" type="text" class="form-control" id="" placeholder="输入 ...">
+										<span class="input-suffix">
+											<i class="fa fa-search"></i>
+										</span>
+									</div>
+								</div>
+								<div class="form-group">
 									<div class="checkbox pull-left">
 										<label class="checkbox-label">
 											<span class="checkbox-input-wrapper">
@@ -193,14 +204,15 @@
 								<button type="submit" class="btn btn-primary">左提交</button>
 								<button type="submit" class="btn btn-primary pull-right">右提交</button>
 							</form>
-							<form role="form" class="col-xs-5 col-xs-push-1">
+							<form role="form2" class="col-xs-5 col-xs-push-1" method="POST">
+								<div id="errtips" class="hide"></div>
 								<div class="form-group">
 									<label for="useName">用户名（前缀）</label>
 									<div class="input-affix">
 										<span class="input-prefix">
 											<i class="fa fa-user"></i>
 										</span>
-										<input type="text" class="form-control" id="inputError" placeholder="用户名 ...">
+										<input type="text" class="form-control" name="username" id="username" placeholder="用户名 ...">
 									</div>
 								</div>
 								<div class="form-group">
@@ -209,7 +221,7 @@
 										<span class="input-prefix">
 											<i class="fa fa-lock"></i>
 										</span>
-										<input type="text" class="form-control" id="inputError" placeholder="密码 ...">
+										<input type="text" class="form-control" id="" placeholder="密码 ...">
 									</div>
 								</div>
 								<button type="submit" class="btn btn-primary btn-block">块状提交</button>

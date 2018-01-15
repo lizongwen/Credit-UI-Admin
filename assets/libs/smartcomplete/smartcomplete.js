@@ -36,7 +36,7 @@
 			$(this).prev().off("blur", dealKeyEvent);
 		}).on("mouseleave", function() {
 			$(this).prev().on("blur", dealKeyEvent)
-		}).on("mouseenter", "li", function() { //委托
+		}).on("mouseenter", "li", function() {
 			$(this).css({
 				"background": option.actBgColor,
 				"color": option.actFontColor

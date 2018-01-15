@@ -1154,9 +1154,7 @@ a:hover, a:active, a:focus {
 	color: #bbb;
 	opacity: 1;
 }
-.form-control .btn {
-	/* border-radius: 0; */
-}
+
 select.form-control {
 	-webkit-appearance: none;
 	background-position: right 50%;
@@ -1632,9 +1630,6 @@ select.form-control {
 .no-header .box-body {
 	border-top-right-radius: 3px;
 	border-top-left-radius: 3px;
-}
-.box-body>.table {
-	margin-bottom: 0;
 }
 .box-body .fc {
 	margin-top: 5px;
@@ -2449,25 +2444,19 @@ select.form-control {
  * ----------------
  */
 
-.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+/* .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
 	border-top: 1px solid #f4f4f4;
-}
-.table>thead>tr>th {
-	border-bottom: 2px solid #f4f4f4;
-}
+} */
+
 .table tr td .progress {
 	margin-top: 5px;
 }
-.table-bordered {
+
+/* .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
 	border: 1px solid #f4f4f4;
-}
-.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-	border: 1px solid #f4f4f4;
-}
-.table-bordered>thead>tr>th, .table-bordered>thead>tr>td {
-	border-bottom-width: 2px;
-}
-.table.no-border, .table.no-border td, .table.no-border th {
+} */
+
+.table.no-border td, .table.no-border th {
 	border: 0;
 }
 
