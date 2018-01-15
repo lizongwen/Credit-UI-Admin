@@ -1406,20 +1406,15 @@ textarea {
 }
 
 a {
-    color: #2c3e50;
+	color: #1890ff;
+	cursor: pointer;
     text-decoration: none;
 }
 
 a:hover,
 a:focus {
-    color: #11181f;
-    text-decoration: underline;
-}
-
-a:focus {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
+	color: #40a9ff;
+	outline: none;
 }
 
 figure {
