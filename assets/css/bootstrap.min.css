@@ -3539,9 +3539,10 @@ th {
 .table>tfoot>tr>td {
     padding: 8px;
     line-height: 1.42857143;
-    vertical-align: top;
-	border-top: 1px solid #e8e8e8;
-	
+	vertical-align: top;
+	border-style: solid;
+	border-color:#e8e8e8;
+	border-width:1px 0;
 }
 
 .table>thead>tr>th {
@@ -5073,8 +5074,8 @@ fieldset[disabled] .btn-link:focus {
 .btn-xs,
 .btn-group-xs>.btn {
     padding: 1px 5px;
-    font-size: 11px;
-    line-height: 1.5;
+    font-size: 12px;
+    line-height: 1.2;
     border-radius: 2px;
 }
 
