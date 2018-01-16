@@ -21,7 +21,6 @@ html, body {
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	/* font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
 	font-weight: 400;
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -2331,7 +2330,7 @@ select.form-control {
 	border-top-color: #d9d9d9;
 }
 
-/* PAGINATION */
+/* pagination */
 
 .pagination>li>a {
 	background: #fafafa;
@@ -2400,17 +2399,9 @@ select.form-control {
  * ----------------
  */
 
-/* .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
-	border-top: 1px solid #f4f4f4;
-} */
-
 .table tr td .progress {
 	margin-top: 5px;
 }
-
-/* .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
-	border: 1px solid #f4f4f4;
-} */
 
 .table.no-border td, .table.no-border th {
 	border: 0;
