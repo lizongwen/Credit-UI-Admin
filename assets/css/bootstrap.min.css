@@ -4729,8 +4729,8 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary.active.focus,
 .open>.dropdown-toggle.btn-primary.focus {
     color: #fff;
-    background-color: #0F6793;
-    border-color: #0F6793;
+    background-color:#096dd9;
+    border-color: #096dd9;
 }
 
 .btn-primary:active,
@@ -4766,16 +4766,14 @@ fieldset[disabled] .btn-primary.focus {
 .btn-success:focus,
 .btn-success.focus {
     color: #fff;
-    background-color: #75fe32;
-    /*border-color: #0a4b3e;*/
-   border-color: #75fe32;
+    background-color: #73d13d;
+    border-color:#73d13d;
 }
 
 .btn-success:hover {
     color: #fff;
-    background-color: #75fe32;
-    /*border-color: #11866f;*/
-    border-color: #75fe32;
+    background-color: #73d13d;
+    border-color: #73d13d;
 }
 
 .btn-success:active,
@@ -4796,8 +4794,8 @@ fieldset[disabled] .btn-primary.focus {
 .btn-success.active.focus,
 .open>.dropdown-toggle.btn-success.focus {
     color: #fff;
-    background-color: #0e6f5c;
-    border-color: #0a4b3e;
+    background-color: #389e0d;
+    border-color: #389e0d;
 }
 
 .btn-success:active,
@@ -4960,23 +4958,23 @@ fieldset[disabled] .btn-warning.focus {
 
 .btn-danger {
     color: #fff;
-    background-color: #f5222d;
-    border-color: #f5222d;
+    background-color: #FA541C;
+    border-color: #FA541C;
 }
 
 .btn-danger:focus,
 .btn-danger.focus {
     color: #fff;
-    background-color: #ff4d4f;
+    background-color: #ff7a45;
     /*border-color: #921e12;*/
-    border-color: #ff4d4f;
+    border-color: #ff7a45;
 }
 
 .btn-danger:hover {
     color: #fff;
-    background-color: #ff4d4f;
+    background-color: #ff7a45;
     /*border-color: #cd2a19;*/
-    border-color: #ff4d4f;
+    border-color: #ff7a45;
 }
 
 .btn-danger:active,
@@ -5016,8 +5014,8 @@ fieldset[disabled] .btn-danger:focus,
 .btn-danger.disabled.focus,
 .btn-danger[disabled].focus,
 fieldset[disabled] .btn-danger.focus {
-    background-color: #f5222d;
-    border-color: #f5222d;
+    background-color: #d4380d;
+    border-color: #d4380d;
 }
 
 .btn-danger .badge {
