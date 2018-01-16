@@ -4901,8 +4901,8 @@ fieldset[disabled] .btn-info.focus {
 .btn-warning.focus {
     color: #fff;
     background-color: #ffc53d;
-    border-color: #7f5006;
-   /*border-color: #ffc53d;*/
+    /*border-color: #7f5006;*/
+   border-color: #ffc53d;
 }
 
 .btn-warning:hover {
