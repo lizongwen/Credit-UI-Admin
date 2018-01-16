@@ -1975,10 +1975,6 @@ select.form-control {
  * -----------------
  */
 
-.btn {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-}
 .btn.uppercase {
 	text-transform: uppercase;
 }
