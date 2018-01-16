@@ -14,6 +14,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function($, undefine
 
 			var table = $("#table");
 			// 初始化表格
+			console.log($.fn.bootstrapTable.defaults.pagination)
 			table.bootstrapTable({
 				url: "../../"+$.fn.bootstrapTable.defaults.extend.index_url,
 				columns: [
@@ -54,7 +55,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function($, undefine
 							field: 'url',
 							title: __('Url'),
 							align: 'left',
-							searchList: $.getJSON('data/searchlist.json?search=a&field=row[user_id]'),
+							searchList: $.getJSON('../../data/searchlist.json?search=a&field=row[user_id]'),
 							formatter: Controller.api.formatter.url
 						},
 						//点击IP时同时执行搜索此IP,同时普通搜索使用下拉列表的形式

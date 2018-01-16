@@ -1,4 +1,4 @@
-define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function($, undefined, Backend, Table, Form) {
+define(['jquery', 'bootstrap', 'backend', 'table', 'form','bootstrap-table-tree'], function($, undefined, Backend, Table, Form) {
 	var Controller = {
 		index: function() {
 			// 初始化表格参数配置
