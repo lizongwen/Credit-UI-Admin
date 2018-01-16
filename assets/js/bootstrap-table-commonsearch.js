@@ -148,7 +148,7 @@
         var searchSubmit = that.options.formatCommonSubmitButton();
         var searchReset = that.options.formatCommonResetButton();
         htmlBtn.push('<div class="form-group" style="margin:5px">');
-        htmlBtn.push('<div class="col-sm-12 text-center">');
+        htmlBtn.push('<div class="col-sm-24 text-center">');
         htmlBtn.push(sprintf('<button type="submit" class="btn btn-success" >%s</button> ', searchSubmit));
         htmlBtn.push(sprintf('<button type="reset" class="btn btn-default" >%s</button> ', searchReset));
         htmlBtn.push('</div>');
