@@ -281,8 +281,6 @@ define(['jquery', 'bootstrap', 'toastr', 'layer', 'lang'], function ($, undefine
 			});
 		},
 		init: function () {
-			
-			
 			// 对相对地址进行处理
 			$.ajaxSetup({
 				beforeSend: function (xhr, setting) {
@@ -303,7 +301,6 @@ define(['jquery', 'bootstrap', 'toastr', 'layer', 'lang'], function ($, undefine
 					}
 				}
 			});
-
 			//公共代码
 			//配置Toastr的参数
 			Toastr.options = Fast.config.toastr;

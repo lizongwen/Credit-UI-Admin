@@ -7,7 +7,6 @@ define(['fast', 'moment'], function (Fast, Moment) {
                 badgeList = {};
                 $.each(params, function (k, v) {
                     $url = Fast.api.fixurl(k);
-
                     if ($.isArray(v))
                     {
                         $nums = typeof v[0] !== 'undefined' ? v[0] : 0;
