@@ -820,7 +820,8 @@
 
                 if (column.checkbox) {
                     if (!that.options.singleSelect && that.options.checkboxHeader) {
-                        text = '<input name="btSelectAll" type="checkbox" />';
+						// text = '<input name="btSelectAll" type="checkbox"/>';
+						text = '<div class="checkbox"><label class="checkbox-label"><span class="checkbox-input-wrapper"><input type="checkbox" name="btSelectAll"><span class="checkbox-inner"></span></span></label></div>'
                     }
                     that.header.stateField = column.field;
                 }
@@ -879,12 +880,12 @@
             $(window).on('resize.bootstrap-table', $.proxy(this.resetWidth, this));
         }
 
-        this.$selectAll = this.$header.find('[name="btSelectAll"]');
-        this.$selectAll.off('click').on('click', function () {
-                var checked = $(this).prop('checked');
-                that[checked ? 'checkAll' : 'uncheckAll']();
-                that.updateSelected();
-            });
+		this.$selectAll = this.$header.find('[name="btSelectAll"]');
+		this.$selectAll.off('click').on('click', function () {
+			var checked = $(this).prop('checked');
+			that[checked ? 'checkAll' : 'uncheckAll']();
+			that.updateSelected();
+		});
     };
 
     BootstrapTable.prototype.initFooter = function () {
@@ -1745,7 +1746,7 @@
 
                 text = [sprintf(that.options.cardView ?
                         '<div class="card-view %s">' : '<td class="bs-checkbox %s">', column['class'] || ''),
-                    '<input' +
+                    '<div class="checkbox"><label class="checkbox-label"><span class="checkbox-input-wrapper"><input' +
                     sprintf(' data-index="%s"', i) +
                     sprintf(' name="%s"', that.options.selectItemName) +
                     sprintf(' type="%s"', type) +
@@ -1754,7 +1755,7 @@
                         (value_ || value && value.checked) ? 'checked' : undefined) +
                     sprintf(' disabled="%s"', !column.checkboxEnabled ||
                         (value && value.disabled) ? 'disabled' : undefined) +
-                    ' />',
+                    '/><span class="checkbox-inner"></span></span></label></div>',
                     that.header.formatters[j] && typeof value === 'string' ? value : '',
                     that.options.cardView ? '</div>' : '</td>'
                 ].join('');
@@ -2054,7 +2055,6 @@
 
     BootstrapTable.prototype.getCaret = function () {
         var that = this;
-
         $.each(this.$header.find('th'), function (i, th) {
             $(th).find('.sortable').removeClass('desc asc').addClass($(th).data('field') === that.options.sortName ? that.options.sortOrder : 'both');
         });
@@ -2063,12 +2063,12 @@
     BootstrapTable.prototype.updateSelected = function () {
         var checkAll = this.$selectItem.filter(':enabled').length &&
             this.$selectItem.filter(':enabled').length ===
-            this.$selectItem.filter(':enabled').filter(':checked').length;
-
-        this.$selectAll.add(this.$selectAll_).prop('checked', checkAll);
-
+			this.$selectItem.filter(':enabled').filter(':checked').length;
+		this.$selectAll.add(this.$selectAll_).prop('checked', checkAll);
+		this.$selectAll.closest('label')[this.$selectAll.prop('checked') ? 'addClass' : 'removeClass']('checkbox-checked');
         this.$selectItem.each(function () {
-            $(this).closest('tr')[$(this).prop('checked') ? 'addClass' : 'removeClass']('selected');
+			$(this).closest('tr')[$(this).prop('checked') ? 'addClass' : 'removeClass']('selected');
+			$(this).closest('label')[$(this).prop('checked') ? 'addClass' : 'removeClass']('checkbox-checked');
         });
     };
 

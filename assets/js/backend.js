@@ -79,20 +79,19 @@ define(['fast', 'moment'], function (Fast, Moment) {
 			});
 			// 点击.radio-label的元素事件
 			$(document).on('click','.radio-label',function(e){
-				e.preventDefault();
 				if($(this).hasClass('radio-disabled')){
 					return;
 				}
 				$(this).parents('.form-group').find('.radio-label').removeClass('radio-checked');
 				$(this).addClass('radio-checked');
 			})
-			// 点击.checkbox-label的元素事件
-			$(document).on('click','.checkbox-label',function(e){
-				e.preventDefault();
-				if($(this).hasClass('checkbox-disabled')){
+			// input元素点击事件
+			$('input[type=checkbox]').on('click',function(e){
+				var label=$(this).closest('label');
+				if(label.hasClass('checkbox-disabled')){
 					return;
 				}
-				$(this).toggleClass('checkbox-checked');
+				label.toggleClass('checkbox-checked');
 			})
             //修复含有fixed-footer类的body边距
             if ($(".fixed-footer").size() > 0) {
@@ -105,7 +104,6 @@ define(['fast', 'moment'], function (Fast, Moment) {
     window.Moment = Moment;
     //将Backend渲染至全局,以便于在子框架中调用
     window.Backend = Backend;
-
     Backend.init();
     return Backend;
 });
