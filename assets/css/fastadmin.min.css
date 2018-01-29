@@ -4514,7 +4514,7 @@ span.twitter-typeahead .tt-menu li.notfound, span.twitter-typeahead .tt-dropdown
 .position-static {
 	position: static !important;
 }
-.list-header {
+/*.list-header {
 	font-size: 15px;
 	padding: 10px 4px;
 	font-weight: bold;
@@ -4531,7 +4531,7 @@ span.twitter-typeahead .tt-menu li.notfound, span.twitter-typeahead .tt-dropdown
 }
 .list-link>a:hover {
 	color: #222;
-}
+}*/
 .font-light {
 	font-weight: 300;
 }
@@ -4690,5 +4690,71 @@ span.twitter-typeahead .tt-menu li.notfound, span.twitter-typeahead .tt-dropdown
 		white-space: normal !important;
 	}
 }
-
+/*list列表*/
+.list-bordered {
+    border-radius: 4px;
+    border: 1px solid #d9d9d9;
+}
+.list {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.65);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+}
+.list-bordered .list-item {
+    border-bottom: 1px solid #e8e8e8;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.list-item {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.list-bordered .list-header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.list-bordered .list-header {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.list-split .list-header {
+    border-bottom: 1px solid #e8e8e8;
+}
+.list-bordered .list-footer {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+.list-bordered .list-footer {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.list * {
+    outline: none;
+}
+.list-bordered.list-sm .list-header, .list-bordered.list-sm .list-footer {
+    padding: 8px 16px;
+}
+.list-sm .list-item {
+    padding: 8px 16px;
+}
+.list-bordered.list-lg .list-header, .list-bordered.list-lg .list-footer {
+    padding: 16px 24px;
+}
+.list-lg .list-item  {
+    padding: 16px 24px;
+}
 /*# sourceMappingURL=fastadmin.min.css.map */

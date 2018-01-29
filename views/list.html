@@ -1,94 +1,186 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 
-<head>
-	<meta charset="utf-8">
-	<title>表格完整示例</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="renderer" content="webkit">
+	<head>
+		<meta charset="utf-8">
+		<title>表格完整示例</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="renderer" content="webkit">
 
-	<link rel="shortcut icon" href="../assets/img/favicon.ico" />
-	<!-- Loading Bootstrap -->
-	<link href="../assets/css/backend.css" rel="stylesheet">
+		<link rel="shortcut icon" href="../assets/img/favicon.ico" />
+		<!-- Loading Bootstrap -->
+		<link href="../assets/css/backend.css" rel="stylesheet">
 
-	<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-	<!--[if lt IE 9]>
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+		<!--[if lt IE 9]>
 		<script src="assets/js/html5shiv.js"></script>
 		<script src="assets/js/respond.min.js"></script>
 	<![endif]-->
-	<script type="text/javascript">
-		var require = {
-			"config": {
-				"site": {
-					"name": "FastAdmin",
-					"cdnurl": "../",
-					"version": "1.0.0",
-					"timezone": "Asia/Shanghai",
-					"languages": {
-						"backend": "zh-cn",
-						"frontend": "zh-cn"
-					}
-				},
-				"upload": {
-					"cdnurl": "./",
-					"uploadurl": "data/upload.json",
-					"bucket": "yourbucketname",
-					"maxsize": "10mb",
-					"mimetype": "*",
-					"multipart": {
-						"policy": "eyJidWNrZXQiOiJ5b3VyYnVja2V0bmFtZSIsInNhdmUta2V5IjoiXC91cGxvYWRzXC97eWVhcn17bW9ufXtkYXl9XC97ZmlsZW1kNX17LnN1ZmZpeH0iLCJleHBpcmF0aW9uIjoxNTAwNTI2NTczLCJub3RpZnktdXJsIjoiaHR0cDpcL1wvd3d3LnlvdXJzaXRlLmNvbVwvdXB5dW5cL25vdGlmeSJ9",
-						"signature": "043eaf09c0319b1a9a11d06511bfdc4e",
-						"bucket": "yourbucketname",
-						"save-key": "/uploads/{year}{mon}{day}/{filemd5}{.suffix}",
-						"expiration": 1500526573,
-						"notify-url": "http://www.yoursite.com/upyun/notify"
+		<script type="text/javascript">
+			var require = {
+				"config": {
+					"site": {
+						"name": "FastAdmin",
+						"cdnurl": "../",
+						"version": "1.0.0",
+						"timezone": "Asia/Shanghai",
+						"languages": {
+							"backend": "zh-cn",
+							"frontend": "zh-cn"
+						}
 					},
-					"multiple": false
-				},
-				"modulename": "admin",
-				"controllername": "bootstraptable",
-				"actionname": "index",
-				"jsname": "backend/example/bootstraptable",
-				"moduleurl": "./",
-				"language": "zh-cn",
-				"referer": null
-			}
-		};
-	</script>
-</head>
+					"upload": {
+						"cdnurl": "./",
+						"uploadurl": "data/upload.json",
+						"bucket": "yourbucketname",
+						"maxsize": "10mb",
+						"mimetype": "*",
+						"multipart": {
+							"policy": "eyJidWNrZXQiOiJ5b3VyYnVja2V0bmFtZSIsInNhdmUta2V5IjoiXC91cGxvYWRzXC97eWVhcn17bW9ufXtkYXl9XC97ZmlsZW1kNX17LnN1ZmZpeH0iLCJleHBpcmF0aW9uIjoxNTAwNTI2NTczLCJub3RpZnktdXJsIjoiaHR0cDpcL1wvd3d3LnlvdXJzaXRlLmNvbVwvdXB5dW5cL25vdGlmeSJ9",
+							"signature": "043eaf09c0319b1a9a11d06511bfdc4e",
+							"bucket": "yourbucketname",
+							"save-key": "/uploads/{year}{mon}{day}/{filemd5}{.suffix}",
+							"expiration": 1500526573,
+							"notify-url": "http://www.yoursite.com/upyun/notify"
+						},
+						"multiple": false
+					},
+					"modulename": "admin",
+					"controllername": "bootstraptable",
+					"actionname": "index",
+					"jsname": "backend/example/bootstraptable",
+					"moduleurl": "./",
+					"language": "zh-cn",
+					"referer": null
+				}
+			};
+		</script>
+	</head>
 
-<body class="inside-header inside-aside ">
-	<div id="main" role="main">
-		<section class="content-header">
-			<h1>列表<small>控制面板</small></h1>
-			<ol class="breadcrumb">
-				<li>
-					<a href="#">
-						<i class="fa fa-dashboard"></i>主页</a>
-				</li>
-				<li>
-					<a href="#">列表</a>
-				</li>
-				<li class="active">简单的列表</li>
-			</ol>
-		</section>
-		<div class="content">
-			<div class="box box-primary">
-				<div class="box-header with-border">
-					<h3 class="box-title" style="margin-bottom: 10px;">列表Default Size</h3>
-					<ul class="list-group">
+	<body class="inside-header inside-aside ">
+		<div id="main" role="main">
+			<section class="content-header">
+				<h1>列表<small>控制面板</small></h1>
+				<ol class="breadcrumb">
+					<li>
+						<a href="#">
+							<i class="fa fa-dashboard"></i>主页</a>
+					</li>
+					<li>
+						<a href="#">列表</a>
+					</li>
+					<li class="active">简单的列表</li>
+				</ol>
+			</section>
+			<div class="content">
+				<div class="box box-primary">
+					<div class="box-header with-border">
+						<h3 class="box-title" style="margin-bottom: 10px;">列表Default Size</h3>
+						<div class="list  list-split list-bordered  list-something-after-last-item">
+							<div class="list-header">
+								<div>Header</div>
+							</div>
+							<div>
+								<div class=" spin-nested-loading">
+									<div class=" spin-container">
+										<div class=" list-item">
+											<div class="list-item-content  list-item-content-single">Racing car sprays burning fuel into crowd.</div>
+										</div>
+										<div class="list-item">
+											<div class=" list-item-content  list-item-content-single">Japanese princess to wed commoner.</div>
+										</div>
+										<div class=" list-item">
+											<div class=" list-item-content  list-item-content-single">Australian walks 100km after outback crash.</div>
+										</div>
+										<div class=" list-item">
+											<div class=" list-item-content  list-item-content-single">Man charged over missing wedding girl.</div>
+										</div>
+										<div class=" list-item">
+											<div class=" list-item-content  list-item-content-single">Los Angeles battles huge wildfires.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="list-footer">
+								<div>Footer</div>
+							</div>
+						</div>
+						<!--<ul class="list-group">
 						<li class="list-group-item">免费域名注册</li>
 						<li class="list-group-item">免费 Window 空间托管</li>
 						<li class="list-group-item">图像的数量</li>
 						<li class="list-group-item">24*7 支持</li>
-						<li class="list-group-item">每年更新成本</li>
-					</ul>
+						<li class="list-group-item">每年更新成本</li>=
+					</ul>-->
+					</div>
+					<div class="box-header with-border">
+						<h3 class="box-title" style="margin-bottom: 10px;">列表Small Size</h3>
+						<div class="list  list-sm  list-split  list-bordered  list-something-after-last-item">
+							<div class=" list-header">
+								<div>Header</div>
+							</div>
+							<div>
+								<div class=" spin-nested-loading">
+									<div class=" spin-container">
+										<div class="list-item">
+											<div class="list-item-content   list-item-content-single">Racing car sprays burning fuel into crowd.</div>
+										</div>
+										<div class="list-item">
+											<div class="list-item-content   list-item-content-single">Japanese princess to wed commoner.</div>
+										</div>
+										<div class="list-item">
+											<div class="list-item-content   list-item-content-single">Australian walks 100km after outback crash.</div>
+										</div>
+										<div class="list-item">
+											<div class="list-item-content   list-item-content-single">Man charged over missing wedding girl.</div>
+										</div>
+										<div class="list-item">
+											<div class="list-item-content   list-item-content-single">Los Angeles battles huge wildfires.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="  list-footer">
+								<div>Footer</div>
+							</div>
+						</div>
+					</div>
+					<div class="box-header with-border">
+						<h3 class="box-title" style="margin-bottom: 10px;">列表large Size</h3>
+						<div class=" list  list-lg  list-split  list-bordered  list-something-after-last-item">
+							<div class=" list-header">
+								<div>Header</div>
+							</div>
+							<div>
+								<div class=" spin-nested-loading">
+									<div class=" spin-container">
+										<div class=" list-item">
+											<div class=" list-item-content  list-item-content-single">Racing car sprays burning fuel into crowd.</div>
+										</div>
+										<div class=" list-item">
+											<div class=" list-item-content  list-item-content-single">Japanese princess to wed commoner.</div>
+										</div>
+										<div class=" list-item">
+											<div class=" list-item-content  list-item-content-single">Australian walks 100km after outback crash.</div>
+										</div>
+										<div class=" list-item">
+											<div class=" list-item-content  list-item-content-single">Man charged over missing wedding girl.</div>
+										</div>
+										<div class=" list-item">
+											<div class=" list-item-content  list-item-content-single">Los Angeles battles huge wildfires.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class=" list-footer">
+								<div>Footer</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				
 			</div>
 		</div>
-	</div>
-	<script src="../assets/js/require.min.js" data-main="../assets/js/require-backend.js"></script>
-</body>
+		<script src="../assets/js/require.min.js" data-main="../assets/js/require-backend.js"></script>
+	</body>
 
 </html>
