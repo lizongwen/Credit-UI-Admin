@@ -32,6 +32,7 @@ require.config({
 		'bootstrap-table-mobile': '../libs/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile',
 		'bootstrap-table-tree': '../libs/bootstrap-table/dist/bootstrap-table-treegrid',
 		'bootstrap-table-lang': '../libs/bootstrap-table/dist/locale/bootstrap-table-zh-CN',
+		'bootstrap-breadcrumb':'../libs/bootstrap-breadcrumb/bootstrap-breadcrumb',
 		'select2':'../libs/select2/select2.min',
 		'select2-to-tree':'../libs/select2-to-tree/select2totree',
 		'icheck':'../libs/icheck/icheck.min',
