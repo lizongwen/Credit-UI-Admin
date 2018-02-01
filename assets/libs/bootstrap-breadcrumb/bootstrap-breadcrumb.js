@@ -86,18 +86,12 @@
 
 	$.fn.breadcrumb = function (options) {
 		var breadcrumb=new Breadcrumb(this, options);
-		options.breadcrumbs.forEach(item => {
-			breadcrumb.push(item)
-		});
-		
-
 		return breadcrumb;
 	}
 
 	$.fn.breadcrumb.defaults = {
 		keyboard: false,
 		separator:'',
-		breadcrumbs:[]
 	}
 
 }(window.jQuery || window.ender);
