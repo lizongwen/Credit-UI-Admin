@@ -128,12 +128,10 @@ body.hold-transition .content-wrapper, body.hold-transition .right-side, body.ho
 /* Content */
 
 .content {
-	min-height: 250px;
+	min-height: 500px;
 	padding: 15px;
 	margin-right: auto;
 	margin-left: auto;
-	padding-left: 15px;
-	padding-right: 15px;
 }
 
 /* H1 - H6 font */
@@ -2328,10 +2326,6 @@ select.form-control {
 
 /* pagination */
 
-.pagination>li>a {
-	background: #fafafa;
-	color: #666;
-}
 .pagination.pagination-flat>li>a {
 	border-radius: 0 !important;
 }
