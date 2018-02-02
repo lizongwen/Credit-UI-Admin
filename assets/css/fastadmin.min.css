@@ -4691,7 +4691,7 @@ span.twitter-typeahead .tt-menu li.notfound, span.twitter-typeahead .tt-dropdown
 	}
 }
 /*list列表*/
-.list-bordered {
+.list-bordered{
     border-radius: 4px;
     border: 1px solid #d9d9d9;
 }
@@ -4757,4 +4757,5 @@ span.twitter-typeahead .tt-menu li.notfound, span.twitter-typeahead .tt-dropdown
 .list-lg .list-item  {
     padding: 16px 24px;
 }
+
 /*# sourceMappingURL=fastadmin.min.css.map */
