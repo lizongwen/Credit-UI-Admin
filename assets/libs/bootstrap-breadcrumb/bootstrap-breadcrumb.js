@@ -77,7 +77,7 @@
 	}
 
 	Breadcrumb.prototype.reset = function () {
-		this.$element.children('li').remove()
+		this.$element.children('li').remove();
 		this.$element.trigger('change');
 	}
 
