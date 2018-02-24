@@ -23,7 +23,8 @@ require.config({
 		//
 		// 以下的包从bower的libs目录加载
 		'jquery': '../libs/jquery/dist/jquery.min',
-		'bootstrap': '../libs/bootstrap/dist/js/bootstrap.min',
+		'bootstrap': '../libs/bootstrap/dist/js/bootstrap',
+		'bootstrap-hover-dropdown':'../libs/bootstrap/dist/js/bootstrap-hover-dropdown.min',
 		'bootstrap-datetimepicker': '../libs/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min',
 		'bootstrap-select': '../libs/bootstrap-select/dist/js/bootstrap-select.min',
 		'bootstrap-select-lang': '../libs/bootstrap-select/dist/js/i18n/defaults-zh_CN',
@@ -58,6 +59,9 @@ require.config({
 	// shim依赖配置
 	shim: {
 		'bootstrap': ['jquery'],
+		'bootstrap-hover-dropdown':{
+			deps:['bootstrap']
+		},
 		'bootstrap-table': {
 			deps: [
 				'bootstrap',
