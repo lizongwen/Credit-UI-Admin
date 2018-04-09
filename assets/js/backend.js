@@ -86,13 +86,19 @@ define(['fast', 'moment'], function (Fast, Moment) {
 				$(this).addClass('radio-checked');
 			})
 			// input元素点击事件
-			$('input[type=checkbox]').on('click',function(e){
-				var label=$(this).closest('label');
-				if(label.hasClass('checkbox-disabled')){
+			$('input[type=checkbox]').on('change',function(){
+				if($(this).disabled){
 					return;
 				}
-				label.toggleClass('checkbox-checked');
-			})
+				alert($(this).prop('checked'));
+				var isChked=$(this).prop('checked');
+				var label=$(this).closest('label');
+				if(isChked){
+					label.addClass('checkbox-checked');
+				}else{
+					label.removeClass('checkbox-checked');
+				}
+			});
             //修复含有fixed-footer类的body边距
             if ($(".fixed-footer").size() > 0) {
                 $(document.body).css("padding-bottom", $(".fixed-footer").height());

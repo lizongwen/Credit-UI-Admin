@@ -4,6 +4,7 @@
  */
 (function ($) {
 	$.fn.select2ToTree = function (options) {
+		
 		var opts = $.extend({}, options);
 
 		if (opts.treeData) {
@@ -37,8 +38,8 @@
 			evt.stopPropagation ? evt.stopPropagation() : evt.cancelBubble = true;
 			evt.preventDefault ? evt.preventDefault() : evt.returnValue = false;
 		}
-
 		var s2inst = this.select2(opts);
+		// this.select2('setValue','');
 
 		s2inst.on("select2:open", function (evt) {
 			var s2data = s2inst.data("select2");

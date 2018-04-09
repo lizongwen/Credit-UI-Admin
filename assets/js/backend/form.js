@@ -99,6 +99,7 @@ define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'select2-to-tree',
 					},
 					invalid: function (form, errors) {
 						console.log(form,errors)
+						alert(122)
 						$.each(errors, function (i, j) {
 							Toastr.error(j);
 						});

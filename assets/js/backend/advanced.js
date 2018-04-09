@@ -4,9 +4,15 @@ define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'select2-to-tree',
 			$('.selectpicker').each(function () {
 				$(this).selectpicker()
 			});
-			$('.select2').each(function () {
-				$(this).select2()
-			});
+			// $('#select2_id_1').each(function () {
+				// $(this).select2({
+					// placeholder :'请选择'
+			// 	})
+			// });
+			// $("#select2_id_1").select2({
+				// placeholder:'请选择'
+			// });
+			
 			$('#datepicker').datetimepicker({
 				showClose: true,
 				format: 'YYYY-MM-DD'
@@ -79,7 +85,8 @@ define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'select2-to-tree',
 					text: "中国"
 				}
 			];
-			$("#sel_1").select2ToTree({ treeData: { dataArr: mydata }, maximumSelectionLength: 3 });
+			// $("#sel_1").val("").select2();  
+			$("#sel_1").select2ToTree({ treeData: { dataArr: mydata }, maximumSelectionLength: 3,placeholder:'请选择',allowClear: true});
 			Controller.api.bindevent();
 		},
 		api: {
