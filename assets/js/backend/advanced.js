@@ -2,7 +2,10 @@ define(['jquery', 'bootstrap', 'bootstrap-select', 'select2', 'select2-to-tree',
 	var Controller = {
 		index: function () {
 			$('.selectpicker').each(function () {
-				$(this).selectpicker()
+				$(this).selectpicker({
+					iconBase:'icon iconfont',
+					tickIcon:'icon-check1'
+				})
 			});
 			// $('#select2_id_1').each(function () {
 				// $(this).select2({
